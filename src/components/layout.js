@@ -1,17 +1,16 @@
 import * as React from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 
-import logo from "../../images/logo.png"
+import logo from "../images/logo.png"
 
-import { heading } from "./layout.module.css"
-
-import { navBar, pageWrapper } from "./layout.scss"
+// import { heading } from "./layout.module.css"
+import "../styles/layout.sass"
 
 const Layout = ({ pageTitle, children }) => {
   return (
-    <div className={pageWrapper}>
-      <nav className={navBar}>
-        <img src={logo} alt="Logo" width="40px" />
+    <div className="page-wrapper">
+      <nav className="nav-bar">
+        <img src={logo} alt="Logo" className="logo" />
         {/* <ul className={navLinks}>
           <li className={navLinkItem}>
             <Link to="/" className={navLinkText}>
@@ -26,7 +25,7 @@ const Layout = ({ pageTitle, children }) => {
         </ul> */}
       </nav>
       <main>
-        <h1 className={heading}>{pageTitle}</h1>
+        <h1>{pageTitle}</h1>
         {children}
       </main>
     </div>

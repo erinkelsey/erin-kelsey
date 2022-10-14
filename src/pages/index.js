@@ -1,7 +1,7 @@
 import * as React from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 
-import Layout from "../components/Layout/layout"
+import Layout from "../components/layout"
 
 import "./_base.scss"
 
