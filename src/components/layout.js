@@ -4,13 +4,13 @@ import * as React from "react"
 import logo from "../images/logo.png"
 
 // import { heading } from "./layout.module.css"
-import "../styles/layout.sass"
+import { pageWrapper, navBar, navBarLogo } from "../styles/layout.module.sass"
 
 const Layout = ({ pageTitle, children }) => {
   return (
-    <div className="page-wrapper">
-      <nav className="nav-bar">
-        <img src={logo} alt="Logo" className="logo" />
+    <div className={pageWrapper}>
+      <nav className={navBar}>
+        <img src={logo} alt="Logo" className={navBarLogo} />
         {/* <ul className={navLinks}>
           <li className={navLinkItem}>
             <Link to="/" className={navLinkText}>
