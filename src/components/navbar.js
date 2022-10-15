@@ -57,18 +57,17 @@ const StyledNav = styled.nav`
   ${({ theme }) => theme.mixins.flexBetween};
   position: relative;
   width: 100%;
-  color: var(--lightest-slate);
+  color: var(--slate);
   font-family: var(--font-mono);
-  counter-reset: item 0;
   z-index: 12;
+  padding-top: 10px; // new
 
   .logo {
     ${({ theme }) => theme.mixins.flexCenter};
 
     a {
       color: var(--green);
-      width: 42px;
-      height: 42px;
+      height: 75px;
 
       &:hover,
       &:focus {
@@ -103,19 +102,10 @@ const StyledLinks = styled.div`
     li {
       margin: 0 5px;
       position: relative;
-      counter-increment: item 1;
-      font-size: var(--fz-xs);
+      font-size: var(--fz-md);
 
       a {
-        padding: 10px;
-
-        &:before {
-          content: '0' counter(item) '.';
-          margin-right: 5px;
-          color: var(--green);
-          font-size: var(--fz-xxs);
-          text-align: right;
-        }
+        padding: 16px;
       }
     }
   }
@@ -123,7 +113,7 @@ const StyledLinks = styled.div`
   .resume-button {
     ${({ theme }) => theme.mixins.smallButton};
     margin-left: 15px;
-    font-size: var(--fz-xs);
+    font-size: var(--fz-md);
   }
 `
 
