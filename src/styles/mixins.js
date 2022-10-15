@@ -6,7 +6,7 @@ const button = css`
   border: 1px solid var(--green);
   border-radius: var(--border-radius);
   font-size: var(--fz-xs);
-  font-family: var(--font-mono);
+  font-family: var(--font-label);
   line-height: 1;
   text-decoration: none;
   cursor: pointer;
@@ -88,13 +88,13 @@ const mixins = {
   button,
 
   smallButton: css`
-    color: var(--green);
+    color: var(--pink);
     background-color: transparent;
-    border: 1px solid var(--green);
+    border: 1px solid var(--pink);
     border-radius: var(--border-radius);
     padding: 0.75rem 1rem;
     font-size: var(--fz-xs);
-    font-family: var(--font-mono);
+    font-family: var(--font-label);
     line-height: 1;
     text-decoration: none;
     cursor: pointer;
@@ -102,7 +102,7 @@ const mixins = {
     &:hover,
     &:focus,
     &:active {
-      background-color: var(--green-tint);
+      background-color: var(--pink-tint);
       outline: none;
     }
     &:after {
@@ -117,7 +117,7 @@ const mixins = {
     border-radius: var(--border-radius);
     padding: 1.25rem 1.75rem;
     font-size: var(--fz-sm);
-    font-family: var(--font-mono);
+    font-family: var(--font-label);
     line-height: 1;
     text-decoration: none;
     cursor: pointer;
@@ -134,12 +134,12 @@ const mixins = {
   `,
 
   boxShadow: css`
-    box-shadow: 0 10px 30px -15px var(--navy-shadow);
+    box-shadow: 0 10px 30px -15px var(--purple-shadow);
     transition: var(--transition);
 
     &:hover,
     &:focus {
-      box-shadow: 0 20px 30px -15px var(--navy-shadow);
+      box-shadow: 0 20px 30px -15px var(--purple-shadow);
     }
   `,
 

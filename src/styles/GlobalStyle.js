@@ -20,13 +20,13 @@ const GlobalStyle = createGlobalStyle`
   }
 
   ::selection {
-    background-color: var(--lightest-navy);
+    background-color: var(--lightest-purple);
     color: var(--lightest-slate);
   }
 
   /* Provide basic, default focus styles.*/
   :focus {
-    outline: 2px dashed var(--green);
+    outline: 2px dashed var(--pink);
     outline-offset: 3px;
   }
 
@@ -45,24 +45,24 @@ const GlobalStyle = createGlobalStyle`
     focus.
   */
   :focus-visible {
-    outline: 2px dashed var(--green);
+    outline: 2px dashed var(--pink);
     outline-offset: 3px;
   }
 
   /* Scrollbar Styles */
   html {
     scrollbar-width: thin;
-    scrollbar-color: var(--dark-slate) var(--navy);
+    scrollbar-color: var(--dark-slate) var(--purple);
   }
   ::-webkit-scrollbar {
     width: 12px;
   }
   ::-webkit-scrollbar-track {
-    background: var(--navy);
+    background: var(--purple);
   }
   ::-webkit-scrollbar-thumb {
     background-color: var(--dark-slate);
-    border: 3px solid var(--navy);
+    border: 3px solid var(--purple);
     border-radius: 10px;
   }
 
@@ -73,9 +73,9 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    background-color: var(--navy);
+    background-color: var(--darkest-purple);
     color: var(--slate);
-    font-family: var(--font-sans);
+    font-family: var(--font-body);
     font-size: var(--fz-xl);
     line-height: 1.3;
 
@@ -184,7 +184,7 @@ const GlobalStyle = createGlobalStyle`
     position: relative;
     margin: 10px 0 40px;
     width: 100%;
-    font-size: clamp(26px, 5vw, var(--fz-heading));
+    font-size: clamp(26px, 5vw, var(--fz-heading-sm));
     white-space: nowrap;
 
     &:before {
@@ -194,7 +194,7 @@ const GlobalStyle = createGlobalStyle`
       content: '0' counter(section) '.';
       margin-right: 10px;
       color: var(--green);
-      font-family: var(--font-mono);
+      font-family: var(--font-heading);
       font-size: clamp(var(--fz-md), 3vw, var(--fz-xl));
       font-weight: 400;
 
@@ -212,7 +212,7 @@ const GlobalStyle = createGlobalStyle`
       width: 300px;
       height: 1px;
       margin-left: 20px;
-      background-color: var(--lightest-navy);
+      background-color: var(--lightest-purple);
 
       @media (max-width: 1080px) {
         width: 200px;
@@ -260,7 +260,7 @@ const GlobalStyle = createGlobalStyle`
 
     &:hover,
     &:focus {
-      color: var(--green);
+      color: var(--pink);
     }
 
     &.inline-link {
@@ -300,14 +300,6 @@ const GlobalStyle = createGlobalStyle`
     & > a {
       ${({ theme }) => theme.mixins.inlineLink};
     }
-
-    & > code {
-      background-color: var(--light-navy);
-      color: var(--white);
-      font-size: var(--fz-sm);
-      border-radius: var(--border-radius);
-      padding: 0.3em 0.5em;
-    }
   }
 
   ul {
@@ -345,18 +337,13 @@ const GlobalStyle = createGlobalStyle`
   }
 
   hr {
-    background-color: var(--lightest-navy);
+    background-color: var(--lightest-purple);
     height: 1px;
     border-width: 0px;
     border-style: initial;
     border-color: initial;
     border-image: initial;
     margin: 1rem;
-  }
-
-  code {
-    font-family: var(--font-mono);
-    font-size: var(--fz-md);
   }
 
   .skip-to-content {
@@ -372,7 +359,7 @@ const GlobalStyle = createGlobalStyle`
     &:focus,
     &:active {
       background-color: var(--green);
-      color: var(--navy);
+      color: var(--purple);
       top: 0;
       left: 0;
       width: auto;
@@ -388,7 +375,7 @@ const GlobalStyle = createGlobalStyle`
 
   .overline {
     color: var(--green);
-    font-family: var(--font-mono);
+    font-family: var(--font-label);
     font-size: var(--fz-md);
     font-weight: 400;
   }
@@ -397,7 +384,7 @@ const GlobalStyle = createGlobalStyle`
     color: var(--green);
     margin: 0 0 20px 0;
     font-size: var(--fz-md);
-    font-family: var(--font-mono);
+    font-family: var(--font-heading);
     font-weight: 400;
     line-height: 1.5;
     @media (max-width: 1080px) {
@@ -410,29 +397,6 @@ const GlobalStyle = createGlobalStyle`
     a {
       ${({ theme }) => theme.mixins.inlineLink};
       line-height: 1.5;
-    }
-  }
-
-  .breadcrumb {
-    display: flex;
-    align-items: center;
-    margin-bottom: 50px;
-    color: var(--green);
-
-    .arrow {
-      display: block;
-      margin-right: 10px;
-      padding-top: 4px;
-    }
-
-    a {
-      ${({ theme }) => theme.mixins.inlineLink};
-      font-family: var(--font-mono);
-      font-size: var(--fz-sm);
-      font-weight: 600;
-      line-height: 1.5;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
     }
   }
 

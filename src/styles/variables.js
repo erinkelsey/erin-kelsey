@@ -2,26 +2,30 @@ import { css } from 'styled-components'
 
 const variables = css`
   :root {
-    --darkest-purple: #14002d;
-    --dark-purple: #210049;
-    --pink: #f1a4fe;
+    --darkest-purple: #14002d; // --dark-navy
+    --purple: #210049; // --navy
+    --light-purple: #3e1a68; // --light-navy
+    --lightest-purple: #56357e // --lightest-navy
+    --purple-shadow: rgba(20, 0, 45, 0.7); // --navy-shadow
+    --purple-shadow-nav: rgba(20, 0, 45, 0.85);
+    --dark-slate: #946c90;
     --slate: #bc9cb9;
+    --light-slate: #ccc0cb; 
+    --lightest-slate: #e9d9e7;
     --green: #64ffb5;
-    --green-tint: rgba(100, 255, 218, 0.1);
-    // --light-purple: #112240;
-    // --lightest-purple: #233554;
-    --navy-shadow: rgba(2, 12, 27, 0.7);
-    --navy: #0a192f;
-    --dark-slate: #495670;
-    // --slate: #8892b0;
-    --light-slate: #a8b2d1;
-    --lightest-slate: #ccd6f6;
-    // --white: #e6f1ff;
-    // --blue: #57cbff;
+    --green-tint: rgba(100, 255, 181, 0.1);
+    --pink: #f1a4fe;
+    --pink-tint: rgba(241, 164, 254, 0.1);
 
     --font-sans: 'Quicksand', 'Inter', 'San Francisco', 'SF Pro Text',
       -apple-system, system-ui, sans-serif;
     --font-mono: 'Fira Code', 'SF Mono', 'Fira Mono', 'Roboto Mono', monospace;
+
+    --font-heading: 'Quicksand', 'Inter', 'San Francisco', 'SF Pro Text',
+      -apple-system, system-ui, sans-serif;
+    --font-body: 'Inter', 'Quicksand', 'San Francisco', 'SF Pro Text',
+      -apple-system, system-ui, sans-serif;
+    --font-label: 'Fira Code', 'SF Mono', 'Fira Mono', 'Roboto Mono', monospace;
 
     --fz-xxs: 12px;
     --fz-xs: 13px;
@@ -30,7 +34,12 @@ const variables = css`
     --fz-lg: 18px;
     --fz-xl: 20px;
     --fz-xxl: 22px;
-    --fz-heading: 32px;
+    --fz-heading-xs: 24px;
+    --fz-heading-sm: 32px;
+    --fz-heading-md: 40px;
+    --fz-heading-lg: 48px;
+    --fz-heading-xl: 56px;
+    --fz-heading-xxl: 64px;
 
     --border-radius: 4px;
     --nav-height: 100px;
