@@ -1,4 +1,4 @@
-import { css } from "styled-components"
+import { css } from 'styled-components'
 
 const variables = css`
   :root {
@@ -21,9 +21,9 @@ const variables = css`
     // --pink: #f57dff;
     // --blue: #57cbff;
 
-    --font-sans: "Quicksand", "Inter", "San Francisco", "SF Pro Text",
+    --font-sans: 'Quicksand', 'Inter', 'San Francisco', 'SF Pro Text',
       -apple-system, system-ui, sans-serif;
-    --font-mono: "Fira Code", "SF Mono", "Fira Mono", "Roboto Mono", monospace;
+    --font-mono: 'Fira Code', 'SF Mono', 'Fira Mono', 'Roboto Mono', monospace;
 
     --fz-xxs: 12px;
     --fz-xs: 13px;

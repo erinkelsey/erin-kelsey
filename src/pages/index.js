@@ -1,13 +1,24 @@
-import * as React from "react"
+import * as React from 'react'
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
+import { Layout } from '@components'
 
-import Layout from "../components/layout"
+const StyledMainContainer = styled.main`
+  counter-reset: section;
+`
 
-const IndexPage = () => {
+const IndexPage = ({ location }) => {
   return (
-    <Layout pageTitle="Home">
-      <p>Home page</p>
+    <Layout location={location}>
+      <StyledMainContainer className='fillHeight'>
+        <p>Home page</p>
+      </StyledMainContainer>
     </Layout>
   )
+}
+
+IndexPage.propTypes = {
+  location: PropTypes.object.isRequired,
 }
 
 export default IndexPage

@@ -1,4 +1,4 @@
-import { css } from "styled-components"
+import { css } from 'styled-components'
 
 const button = css`
   color: var(--green);
@@ -73,7 +73,7 @@ const mixins = {
       }
     }
     &:after {
-      content: "";
+      content: '';
       display: block;
       width: 0;
       height: 1px;
@@ -153,7 +153,7 @@ const mixins = {
       padding-left: 30px;
       margin-bottom: 10px;
       &:before {
-        content: "▹";
+        content: '▹';
         position: absolute;
         left: 0;
         color: var(--green);
