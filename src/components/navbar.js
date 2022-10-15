@@ -258,13 +258,14 @@ const NavBar = ({ isHome }) => {
               </TransitionGroup>
             </StyledLinks>
 
-            <TransitionGroup component={null}>
+            {/* <TransitionGroup component={null}>
               {isMounted && (
                 <CSSTransition classNames={fadeClass} timeout={timeout}>
-                  {/* <Menu /> */}
+                  <Menu />
+
                 </CSSTransition>
               )}
-            </TransitionGroup>
+            </TransitionGroup> */}
           </>
         )}
       </StyledNav>

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
-import { ThemeProvider } from 'styled-components'
+import styled, { ThemeProvider } from 'styled-components'
 
 import { GlobalStyle, theme } from '@styles'
-import NavBar from '@components'
+import { NavBar } from '@components'
 
 const StyledContent = styled.div`
   display: flex;
