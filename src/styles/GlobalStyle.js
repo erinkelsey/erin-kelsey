@@ -197,7 +197,7 @@ const GlobalStyle = createGlobalStyle`
     width: 200px;
     border-top: 3px solid var(--pink);
     border-radius: 5px;
-    margin: 10px 0 20px 30px;
+    margin: 10px 0 30px 30px;
   }
 
   img,

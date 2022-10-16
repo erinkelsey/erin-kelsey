@@ -12,6 +12,7 @@ const StyledAboutSection = styled.section`
     display: grid;
     grid-template-columns: 3fr 2fr;
     grid-gap: 50px;
+    align-items: center;
 
     @media (max-width: 768px) {
       display: block;
@@ -43,17 +44,11 @@ const StyledPic = styled.div`
         top: 15px;
         left: 15px;
       }
-
-      .img {
-        filter: none;
-        mix-blend-mode: normal;
-      }
     }
 
     .img {
       position: relative;
       border-radius: var(--border-radius);
-      transition: var(--transition);
     }
 
     &:before,
@@ -65,13 +60,6 @@ const StyledPic = styled.div`
       height: 100%;
       border-radius: var(--border-radius);
       transition: var(--transition);
-    }
-
-    &:before {
-      top: 0;
-      left: 0;
-      background-color: var(--purple);
-      mix-blend-mode: screen;
     }
 
     &:after {
