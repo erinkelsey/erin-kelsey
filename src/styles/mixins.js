@@ -111,9 +111,9 @@ const mixins = {
   `,
 
   bigButton: css`
-    color: var(--green);
+    color: var(--pink);
     background-color: transparent;
-    border: 1px solid var(--green);
+    border: 1px solid var(--pink);
     border-radius: var(--border-radius);
     padding: 1.25rem 1.75rem;
     font-size: var(--fz-sm);
@@ -125,7 +125,7 @@ const mixins = {
     &:hover,
     &:focus,
     &:active {
-      background-color: var(--green-tint);
+      background-color: var(--pink-tint);
       outline: none;
     }
     &:after {

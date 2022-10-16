@@ -7,6 +7,7 @@ import styled, { css } from 'styled-components'
 import { navLinks } from '@config'
 import { loaderDelay } from '@utils'
 import { useScrollDirection, usePrefersReducedMotion } from '@hooks'
+import { Menu } from '@components'
 import { IconLogo, IconLogoHover } from '@components/icons'
 
 const StyledHeader = styled.header`
@@ -217,7 +218,7 @@ const NavBar = ({ isHome }) => {
               <div>{ResumeLink}</div>
             </StyledLinks>
 
-            {/* <Menu /> */}
+            <Menu />
           </>
         ) : (
           <>
@@ -270,14 +271,13 @@ const NavBar = ({ isHome }) => {
               </TransitionGroup>
             </StyledLinks>
 
-            {/* <TransitionGroup component={null}>
+            <TransitionGroup component={null}>
               {isMounted && (
                 <CSSTransition classNames={fadeClass} timeout={timeout}>
                   <Menu />
-
                 </CSSTransition>
               )}
-            </TransitionGroup> */}
+            </TransitionGroup>
           </>
         )}
       </StyledNav>
