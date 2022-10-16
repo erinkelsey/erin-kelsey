@@ -27,6 +27,8 @@ const variables = css`
       -apple-system, system-ui, sans-serif;
     --font-label: 'Fira Code', 'SF Mono', 'Fira Mono', 'Roboto Mono', monospace;
 
+    --fz-xxxxs: 8px;
+    --fz-xxxs: 10px;
     --fz-xxs: 12px;
     --fz-xs: 13px;
     --fz-sm: 14px;

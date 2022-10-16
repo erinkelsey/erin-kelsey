@@ -20,6 +20,17 @@ module.exports = {
     },
   ],
 
+  websiteLinks: [
+    {
+      name: 'GitHub',
+      url: 'https://github.com/erinkelsey/erin-kelsey',
+    },
+    {
+      name: 'Figma',
+      url: 'https://www.figma.com/file/D2FLeSsLc2MCPhnY8mdTxB/UI%2FUX?node-id=6%3A51',
+    },
+  ],
+
   navLinks: [
     {
       name: 'About',

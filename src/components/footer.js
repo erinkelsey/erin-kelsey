@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Icon } from '@components/icons'
-import { socialMedia } from '@config'
+import { socialMedia, websiteLinks } from '@config'
 
 const StyledFooter = styled.footer`
   ${({ theme }) => theme.mixins.flexCenter};
@@ -40,55 +40,38 @@ const StyledSocialLinks = styled.div`
   }
 `
 
-const StyledCredit = styled.div`
+const StyledAuthor = styled.div`
+  ${({ theme }) => theme.mixins.flexCenter}
   color: var(--light-slate);
-  font-family: var(--font-label);
+  font-family: var(--font-body);
   font-size: var(--fz-xxs);
   line-height: 1;
+  padding: 10px;
 
-  a {
-    padding: 10px;
-  }
+  ul {
+    ${({ theme }) => theme.mixins.flexBetween};
+    padding: 0;
+    margin: 0;
+    list-style: none;
 
-  .github-stats {
-    margin-top: 10px;
-
-    & > span {
-      display: inline-flex;
-      align-items: center;
-      margin: 0 7px;
-    }
-    svg {
-      display: inline-block;
-      margin-right: 5px;
-      width: 14px;
-      height: 14px;
+    a {
+      padding-left: 5px;
+      svg {
+        width: 15px;
+        height: 15px;
+      }
     }
   }
 `
 
+const StyledCredit = styled.div`
+  color: var(--light-slate);
+  font-family: var(--font-body);
+  font-size: var(--fz-xxxs);
+  line-height: 1;
+`
+
 const Footer = () => {
-  // const [githubInfo, setGitHubInfo] = useState({
-  //   stars: null,
-  //   forks: null,
-  // })
-
-  // useEffect(() => {
-  //   if (process.env.NODE_ENV !== 'production') {
-  //     return
-  //   }
-  //   fetch('https://api.github.com/repos/bchiang7/v4')
-  //     .then((response) => response.json())
-  //     .then((json) => {
-  //       const { stargazers_count, forks_count } = json
-  //       setGitHubInfo({
-  //         stars: stargazers_count,
-  //         forks: forks_count,
-  //       })
-  //     })
-  //     .catch((e) => console.error(e))
-  // }, [])
-
   return (
     <StyledFooter>
       <StyledSocialLinks>
@@ -104,10 +87,25 @@ const Footer = () => {
         </ul>
       </StyledSocialLinks>
 
-      <StyledCredit tabindex='-1'>
-        <a href='https://github.com/erinkelsey/erin-kelsey'>
-          <div>Designed &amp; Built by Erin Kelsey</div>
-        </a>
+      <StyledAuthor tabindex='-1'>
+        <div>Designed &amp; Built by Erin Kelsey</div>
+        <ul>
+          {websiteLinks &&
+            websiteLinks.map(({ name, url }, i) => (
+              <li key={i}>
+                <a href={url} aria-label={name}>
+                  <Icon name={name} />
+                </a>
+              </li>
+            ))}
+        </ul>
+      </StyledAuthor>
+
+      <StyledCredit>
+        <div>
+          Thank you <a href='https://brittanychiang.com/'>Brittany Chiang</a>{' '}
+          for the design inspiration!
+        </div>
       </StyledCredit>
     </StyledFooter>
   )
