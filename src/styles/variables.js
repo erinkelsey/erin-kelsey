@@ -40,10 +40,12 @@ const variables = css`
     --fz-heading-lg: 48px;
     --fz-heading-xl: 56px;
     --fz-heading-xxl: 64px;
+    --fz-heading-xxxl: 72px;
+    --fz-heading-xxxxl: 80px;
 
     --border-radius: 4px;
     --nav-height: 100px;
-    --nav-scroll-height: 70px;
+    --nav-scroll-height: calc(70px + 6vh);
 
     --tab-height: 42px;
     --tab-width: 120px;

@@ -163,19 +163,22 @@ const GlobalStyle = createGlobalStyle`
   h5,
   h6 {
     margin: 0 0 10px 0;
-    font-weight: 600;
+    font-family: var(--font-heading);
+    font-weight: 500;
     color: var(--lightest-slate);
     line-height: 1.1;
   }
 
   .big-heading {
     margin: 0;
-    font-size: clamp(40px, 8vw, 80px);
+    color: var(--green);
+    font-size: clamp(var(--fz-heading-xl), 10vw, var(--fz-heading-xxxxl))
   }
 
   .medium-heading {
     margin: 0;
-    font-size: clamp(40px, 8vw, 60px);
+    color: var(--pink);
+    font-size: clamp(var(--fz-heading-sm), 3vw, var(--fz-heading-xxl))
   }
 
   .numbered-heading {
@@ -291,11 +294,13 @@ const GlobalStyle = createGlobalStyle`
 
   p {
     margin: 0 0 15px 0;
+    font-family: var(--font-body);
+    font-size: var(--fz-xl);
 
-    &:last-child,
-    &:last-of-type {
-      margin: 0;
-    }
+    // &:last-child,
+    // &:last-of-type {
+    //   margin: 0;
+    // }
 
     & > a {
       ${({ theme }) => theme.mixins.inlineLink};
