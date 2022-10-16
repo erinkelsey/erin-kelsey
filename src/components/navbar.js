@@ -15,7 +15,7 @@ const StyledHeader = styled.header`
   position: fixed;
   top: 0;
   z-index: 11;
-  padding: 0px 10vw;
+  padding: 0px 50px;
   width: 100%;
   height: var(--nav-height);
   background-color: var(--purple-shadow-nav);
