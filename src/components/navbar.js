@@ -15,7 +15,7 @@ const StyledHeader = styled.header`
   position: fixed;
   top: 0;
   z-index: 11;
-  padding: 0px 50px;
+  padding: 0px 10vw;
   width: 100%;
   height: var(--nav-height);
   background-color: var(--purple-shadow-nav);
@@ -61,7 +61,11 @@ const StyledNav = styled.nav`
   color: var(--green);
   font-family: var(--font-label);
   z-index: 12;
-  padding-top: 10px; // new
+  padding-top: 5vh; // new
+
+  @media (max-width: 1080px) {
+    padding-top: 0;
+  }
 
   .logo {
     ${({ theme }) => theme.mixins.flexCenter};
@@ -69,6 +73,7 @@ const StyledNav = styled.nav`
     a {
       color: var(--green);
       height: 75px;
+      width: 50px;
 
       &:hover,
       &:focus {

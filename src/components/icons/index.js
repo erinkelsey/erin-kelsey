@@ -1,5 +1,8 @@
 export { default as Icon } from './icon'
+export { default as IconDataCamp } from './datacamp'
+export { default as IconFigma } from './figma'
 export { default as IconGitHub } from './github'
 export { default as IconInstagram } from './instagram'
 export { default as IconLogo } from './logo'
 export { default as IconLogoHover } from './logoHover'
+export { default as IconUdemy } from './udemy'

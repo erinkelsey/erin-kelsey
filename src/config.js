@@ -43,6 +43,7 @@ module.exports = {
     green: '#64FFB5',
     pink: '#F1A4FE',
     darkPurple: '#14002D',
+    purple: '#210049',
   },
 
   srConfig: (delay = 200, viewFactor = 0.25) => ({

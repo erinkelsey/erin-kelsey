@@ -22,7 +22,7 @@ module.exports = {
         short_name: 'ErinKelsey',
         start_url: '/',
         background_color: config.colors.darkPurple,
-        theme_color: config.colors.pink,
+        theme_color: config.colors.purple,
         display: 'minimal-ui',
         icon: 'src/images/logo.png',
       },

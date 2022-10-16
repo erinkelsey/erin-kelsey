@@ -4,7 +4,9 @@ import {
   // IconAppStore,
   // IconBookmark,
   // IconCodepen,
+  IconDataCamp,
   // IconExternal,
+  IconFigma,
   // IconFolder,
   // IconFork,
   IconGitHub,
@@ -15,6 +17,7 @@ import {
   // IconPlayStore,
   // IconStar,
   // IconTwitter,
+  IconUdemy,
 } from '@components/icons'
 
 const Icon = ({ name }) => {
@@ -23,10 +26,12 @@ const Icon = ({ name }) => {
     //   return <IconAppStore />;
     // case 'Bookmark':
     //   return <IconBookmark />;
-    // case 'Codepen':
-    //   return <IconCodepen />;
+    case 'DataCamp':
+      return <IconDataCamp />
     // case 'External':
     //   return <IconExternal />;
+    case 'Figma':
+      return <IconFigma />
     // case 'Folder':
     //   return <IconFolder />;
     // case 'Fork':
@@ -34,10 +39,6 @@ const Icon = ({ name }) => {
     case 'GitHub':
       return <IconGitHub />
     case 'Instagram':
-      return <IconInstagram />
-    case 'DataCamp':
-      return <IconGitHub />
-    case 'Udemy':
       return <IconInstagram />
     // case 'Linkedin':
     //   return <IconLinkedin />;
@@ -51,6 +52,8 @@ const Icon = ({ name }) => {
     //   return <IconStar />;
     // case 'Twitter':
     //   return <IconTwitter />;
+    case 'Udemy':
+      return <IconUdemy />
     // default:
     //   return <IconExternal />;
     default:
