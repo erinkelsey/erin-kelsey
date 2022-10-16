@@ -6,6 +6,7 @@ module.exports = {
     description:
       'I am a senior software engineer (and beginner ui/ux designer), focused on bringing engaging digital products to life for web and mobile.',
     siteUrl: `https://erinkelsey.io`,
+    image: '/og.png',
   },
   plugins: [
     `gatsby-plugin-styled-components`,

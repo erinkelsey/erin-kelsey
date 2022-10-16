@@ -1,7 +1,7 @@
 import * as React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { Layout } from '@components'
+import { Layout, Seo } from '@components'
 
 const StyledMainContainer = styled.main`
   counter-reset: section;
@@ -23,4 +23,4 @@ IndexPage.propTypes = {
 
 export default IndexPage
 
-export const Head = () => <title>Home Page</title>
+export const Head = () => <Seo />
