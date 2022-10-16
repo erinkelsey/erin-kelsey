@@ -47,7 +47,7 @@ const variables = css`
 
     --border-radius: 4px;
     --nav-height: 100px;
-    --nav-scroll-height: calc(70px + 6vh);
+    --nav-scroll-height: 70px;
 
     --tab-height: 42px;
     --tab-width: 120px;

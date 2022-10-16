@@ -61,7 +61,6 @@ const StyledNav = styled.nav`
   color: var(--green);
   font-family: var(--font-label);
   z-index: 12;
-  padding-top: 5vh; // new
 
   @media (max-width: 1080px) {
     padding-top: 0;
@@ -72,8 +71,8 @@ const StyledNav = styled.nav`
 
     a {
       color: var(--green);
-      height: 75px;
-      width: 50px;
+      height: 65px;
+      width: 40px;
 
       &:hover,
       &:focus {
