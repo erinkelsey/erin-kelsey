@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styled, { ThemeProvider } from 'styled-components'
 
 import { GlobalStyle, theme } from '@styles'
-import { NavBar } from '@components'
+import { NavBar, Social, Email } from '@components'
 
 const StyledContent = styled.div`
   display: flex;
@@ -52,8 +52,16 @@ const Layout = ({ children, location }) => {
       <ThemeProvider theme={theme}>
         <GlobalStyle />
 
+        <a className='skip-to-content' href='#content'>
+          Skip to Content
+        </a>
+
         <StyledContent>
           <NavBar isHome={isHome} />
+          <Social isHome={isHome} />
+          <Email isHome={isHome} />
+
+          <div id='content'>{children}</div>
         </StyledContent>
       </ThemeProvider>
     </div>

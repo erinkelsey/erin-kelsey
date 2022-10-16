@@ -1,49 +1,74 @@
-import * as React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'gatsby'
+import { CSSTransition, TransitionGroup } from 'react-transition-group'
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
-const pageStyles = {
-  color: '#232129',
-  padding: '96px',
-  fontFamily: '-apple-system, Roboto, sans-serif, serif',
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
+import { navDelay } from '@utils'
+import { Layout, Seo } from '@components'
+import { usePrefersReducedMotion } from '@hooks'
 
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: '#8A6534',
-  padding: 4,
-  backgroundColor: '#FFF4DB',
-  fontSize: '1.25rem',
-  borderRadius: 4,
-}
+const StyledMainContainer = styled.main`
+  ${({ theme }) => theme.mixins.flexCenter};
+  flex-direction: column;
+`
+const StyledTitle = styled.h1`
+  color: var(--green);
+  font-family: var(--font-label);
+  font-size: clamp(100px, 25vw, 200px);
+  line-height: 1;
+`
+const StyledSubtitle = styled.h2`
+  font-size: clamp(30px, 5vw, 50px);
+  font-weight: 400;
+`
+const StyledHomeButton = styled(Link)`
+  ${({ theme }) => theme.mixins.bigButton};
+  margin-top: 40px;
+`
 
-const NotFoundPage = () => {
-  return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry 😔, we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === 'development' ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to='/'>Go home</Link>
-      </p>
-    </main>
+const NotFoundPage = ({ location }) => {
+  const [isMounted, setIsMounted] = useState(false)
+  const prefersReducedMotion = usePrefersReducedMotion()
+
+  useEffect(() => {
+    if (prefersReducedMotion) {
+      return
+    }
+
+    const timeout = setTimeout(() => setIsMounted(true), navDelay)
+    return () => clearTimeout(timeout)
+  })
+
+  const content = (
+    <StyledMainContainer className='fillHeight'>
+      <StyledTitle>404</StyledTitle>
+      <StyledSubtitle>Page Not Found</StyledSubtitle>
+      <StyledHomeButton to='/'>Go Home</StyledHomeButton>
+    </StyledMainContainer>
   )
+
+  return (
+    <Layout location={location}>
+      {prefersReducedMotion ? (
+        <>{content}</>
+      ) : (
+        <TransitionGroup component={null}>
+          {isMounted && (
+            <CSSTransition timeout={500} classNames='fadeup'>
+              {content}
+            </CSSTransition>
+          )}
+        </TransitionGroup>
+      )}
+    </Layout>
+  )
+}
+
+NotFoundPage.propTypes = {
+  location: PropTypes.object.isRequired,
 }
 
 export default NotFoundPage
 
-export const Head = () => <title>Not found</title>
+export const Head = () => <Seo title='Erin Kelsey | Page Not Found' />
