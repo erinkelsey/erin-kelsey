@@ -13,7 +13,7 @@ const StyledWorkSection = styled.section`
   .inner {
     display: flex;
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
       display: block;
     }
 
@@ -21,6 +21,14 @@ const StyledWorkSection = styled.section`
     @media (min-width: 700px) {
       min-height: 340px;
     }
+  }
+`
+
+const StyledTitle = styled.div`
+  ${({ theme }) => theme.mixins.flexBetween};
+
+  @media (max-width: 768px) {
+    justify-content: flex-start;
   }
 `
 
@@ -32,7 +40,7 @@ const StyledTabList = styled.div`
   margin: 0;
   list-style: none;
 
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     display: flex;
     overflow-x: auto;
     width: calc(100% + 100px);
@@ -48,7 +56,7 @@ const StyledTabList = styled.div`
 
   li {
     &:first-of-type {
-      @media (max-width: 600px) {
+      @media (max-width: 768px) {
         margin-left: 50px;
       }
       @media (max-width: 480px) {
@@ -56,7 +64,7 @@ const StyledTabList = styled.div`
       }
     }
     &:last-of-type {
-      @media (max-width: 600px) {
+      @media (max-width: 768px) {
         padding-right: 50px;
       }
       @media (max-width: 480px) {
@@ -76,7 +84,7 @@ const StyledTabButton = styled.button`
   border-left: 2px solid var(--lightest-purple);
   background-color: transparent;
   color: ${({ isActive }) => (isActive ? 'var(--green)' : 'var(--slate)')};
-  font-family: var(--font-mono);
+  font-family: var(--font-label);
   font-size: var(--fz-xs);
   text-align: left;
   white-space: nowrap;
@@ -84,9 +92,9 @@ const StyledTabButton = styled.button`
   @media (max-width: 768px) {
     padding: 0 15px 2px;
   }
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     ${({ theme }) => theme.mixins.flexCenter};
-    min-width: 120px;
+    min-width: 220px;
     padding: 0 15px;
     border-left: 0;
     border-bottom: 2px solid var(--lightest-purple);
@@ -114,7 +122,7 @@ const StyledHighlight = styled.div`
   transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition-delay: 0.1s;
 
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     top: auto;
     bottom: 0;
     width: 100%;
@@ -135,7 +143,7 @@ const StyledTabPanels = styled.div`
   width: 100%;
   margin-left: 20px;
 
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     margin-left: 0;
   }
 `
@@ -223,7 +231,7 @@ const Work = () => {
   }
 
   // Only re-run the effect if tabFocus changes
-  useEffect(() => focusTab(), [tabFocus])
+  useEffect(() => focusTab())
 
   // Focus on tabs when using up & down arrow keys
   const onKeyDown = (e) => {
@@ -248,8 +256,13 @@ const Work = () => {
 
   return (
     <StyledWorkSection id='work' ref={revealContainer}>
-      <h2 className='section-heading'>Work</h2>
-      <hr className='section-heading-underline' />
+      <StyledTitle>
+        <div></div>
+        <div>
+          <h2 className='section-heading section-heading-right'>Work</h2>
+          <hr className='section-heading-underline' />
+        </div>
+      </StyledTitle>
 
       <div className='inner'>
         <StyledTabList

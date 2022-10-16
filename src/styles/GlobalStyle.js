@@ -193,11 +193,19 @@ const GlobalStyle = createGlobalStyle`
     white-space: nowrap;
   }
 
+  .section-heading-right {
+    justify-content: flex-end;
+
+    @media (max-width: 768px) {
+      justify-content: flex-start;
+    }
+  }
+
   .section-heading-underline {
     width: 200px;
     border-top: 3px solid var(--pink);
     border-radius: 5px;
-    margin: 10px 0 30px 30px;
+    margin: 10px 30px 30px 30px;
   }
 
   img,
@@ -289,7 +297,7 @@ const GlobalStyle = createGlobalStyle`
         padding-left: 30px;
         margin-bottom: 10px;
         &:before {
-          content: '▹';
+          content: '›';
           position: absolute;
           left: 0;
           color: var(--green);
