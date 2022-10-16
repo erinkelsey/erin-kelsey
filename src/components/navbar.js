@@ -7,7 +7,7 @@ import styled, { css } from 'styled-components'
 import { navLinks } from '@config'
 import { loaderDelay } from '@utils'
 import { useScrollDirection, usePrefersReducedMotion } from '@hooks'
-import { IconLogo } from '@components/icons'
+import { IconLogo, IconLogoHover } from '@components/icons'
 
 const StyledHeader = styled.header`
   ${({ theme }) => theme.mixins.flexBetween};
@@ -122,9 +122,23 @@ const NavBar = ({ isHome }) => {
   const scrollDirection = useScrollDirection('down')
   const [scrolledToTop, setScrolledToTop] = useState(true)
   const prefersReducedMotion = usePrefersReducedMotion()
+  const [hoveringLogo, setHoveringLogo] = useState(false)
 
   const handleScroll = () => {
     setScrolledToTop(window.pageYOffset < 50)
+  }
+
+  const handleMouseOver = () => {
+    setHoveringLogo(true)
+  }
+
+  const handleMouseOut = () => {
+    setHoveringLogo(false)
+  }
+
+  const getLogo = () => {
+    if (hoveringLogo) return <IconLogoHover />
+    return <IconLogo />
   }
 
   useEffect(() => {
@@ -149,14 +163,22 @@ const NavBar = ({ isHome }) => {
   const fadeDownClass = isHome ? 'fadedown' : ''
 
   const Logo = (
-    <div className='logo' tabIndex='-1'>
+    <div
+      className='logo'
+      tabIndex='-1'
+      role='button'
+      onMouseOver={handleMouseOver}
+      onMouseOut={handleMouseOut}
+      onFocus={handleMouseOver}
+      onBlur={handleMouseOut}
+    >
       {isHome ? (
         <a href='/' aria-label='home'>
-          <IconLogo />{' '}
+          {getLogo()}
         </a>
       ) : (
         <Link to='/' aria-label='home'>
-          <IconLogo />
+          {getLogo()}
         </Link>
       )}
     </div>

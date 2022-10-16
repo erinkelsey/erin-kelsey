@@ -7,8 +7,8 @@
     "gatsby"
   ],
   "scripts": {
-    "develop": "BROWSER='google chrome' gatsby develop",
-    "start": "BROWSER='google chrome' gatsby develop",
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
