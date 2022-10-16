@@ -181,52 +181,23 @@ const GlobalStyle = createGlobalStyle`
     font-size: clamp(var(--fz-heading-sm), 3vw, var(--fz-heading-xxl))
   }
 
-  .numbered-heading {
+  .section-heading {
     display: flex;
     align-items: center;
     position: relative;
-    margin: 10px 0 40px;
+    margin: 10px 0 0;
     width: 100%;
-    font-size: clamp(26px, 5vw, var(--fz-heading-sm));
+    font-size: clamp(var(--fz-heading-sm), 3vw, var(--fz-heading-xxl));
+    font-family: var(--font-label);
+    color: var(--green);
     white-space: nowrap;
+  }
 
-    &:before {
-      position: relative;
-      bottom: 4px;
-      counter-increment: section;
-      content: '0' counter(section) '.';
-      margin-right: 10px;
-      color: var(--green);
-      font-family: var(--font-heading);
-      font-size: clamp(var(--fz-md), 3vw, var(--fz-xl));
-      font-weight: 400;
-
-      @media (max-width: 480px) {
-        margin-bottom: -3px;
-        margin-right: 5px;
-      }
-    }
-
-    &:after {
-      content: '';
-      display: block;
-      position: relative;
-      top: -5px;
-      width: 300px;
-      height: 1px;
-      margin-left: 20px;
-      background-color: var(--lightest-purple);
-
-      @media (max-width: 1080px) {
-        width: 200px;
-      }
-      @media (max-width: 768px) {
-        width: 100%;
-      }
-      @media (max-width: 600px) {
-        margin-left: 10px;
-      }
-    }
+  .section-heading-underline {
+    width: 200px;
+    border-top: 3px solid var(--pink);
+    border-radius: 5px;
+    margin: 10px 0 20px 30px;
   }
 
   img,
@@ -295,7 +266,7 @@ const GlobalStyle = createGlobalStyle`
   p {
     margin: 0 0 15px 0;
     font-family: var(--font-body);
-    font-size: var(--fz-xl);
+    font-size: clamp(var(--fz-md), 2vw, var(--fz-xl));
 
     // &:last-child,
     // &:last-of-type {

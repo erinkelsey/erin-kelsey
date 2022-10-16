@@ -18,34 +18,6 @@ const StyledAboutSection = styled.section`
     }
   }
 `
-const StyledText = styled.div`
-  ul.skills-list {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(140px, 200px));
-    grid-gap: 0 10px;
-    padding: 0;
-    margin: 20px 0 0 0;
-    overflow: hidden;
-    list-style: none;
-
-    li {
-      position: relative;
-      margin-bottom: 10px;
-      padding-left: 20px;
-      font-family: var(--font-mono);
-      font-size: var(--fz-xs);
-
-      &:before {
-        content: '▹';
-        position: absolute;
-        left: 0;
-        color: var(--green);
-        font-size: var(--fz-sm);
-        line-height: 12px;
-      }
-    }
-  }
-`
 const StyledPic = styled.div`
   position: relative;
   max-width: 300px;
@@ -81,8 +53,6 @@ const StyledPic = styled.div`
     .img {
       position: relative;
       border-radius: var(--border-radius);
-      mix-blend-mode: multiply;
-      filter: grayscale(100%) contrast(1);
       transition: var(--transition);
     }
 
@@ -100,7 +70,7 @@ const StyledPic = styled.div`
     &:before {
       top: 0;
       left: 0;
-      background-color: var(--navy);
+      background-color: var(--purple);
       mix-blend-mode: screen;
     }
 
@@ -125,60 +95,42 @@ const About = () => {
     sr.reveal(revealContainer.current, srConfig())
   }, [prefersReducedMotion])
 
-  const skills = [
-    'JavaScript (ES6+)',
-    'TypeScript',
-    'React',
-    'Eleventy',
-    'Node.js',
-    'WordPress',
-  ]
-
   return (
     <StyledAboutSection id='about' ref={revealContainer}>
-      <h2 className='numbered-heading'>About Me</h2>
+      <h2 className='section-heading'>About</h2>
+      <hr className='section-heading-underline' />
 
       <div className='inner'>
-        <StyledText>
-          <div>
-            <p>
-              Hi there! Thank you so much for taking the time to visit my
-              website. I am currently looking for new opportunities as a
-              software engineer.
-            </p>
+        <div>
+          <p>
+            Hi there! Thank you so much for taking the time to visit my website.
+            I am currently looking for new opportunities as a software engineer.
+          </p>
 
-            <p>
-              I have worked for a variety of different companies, ever since
-              graduating from the University of Saskatchewan, with a B.Sc.
-              Honours in Computer Science. Some of my previous employers
-              include, a leading fintech solutions provider, a small-scale
-              startup, and a large governmental organization. As a result of my
-              varied work experience, my skills, abilities and knowledge are
-              wide-ranging and diverse.
-            </p>
+          <p>
+            I have worked for a variety of different companies, ever since
+            graduating from the University of Saskatchewan, with a B.Sc. Honours
+            in Computer Science. Some of my previous employers include, a
+            leading fintech solutions provider, a small-scale startup, and a
+            large governmental organization. As a result of my varied work
+            experience, my skills, abilities and knowledge are wide-ranging and
+            diverse.
+          </p>
 
-            <p>
-              I have been a digital nomad for over five years, living and
-              working all across North America, Asia, and more! Life on the
-              road, and working remotely, have led me to become incredibly
-              independent, motivated and resourceful.
-            </p>
+          <p>
+            I have been a digital nomad for over five years, living and working
+            all across North America, Asia, and more! Life on the road, and
+            working remotely, have led me to become incredibly independent,
+            motivated and resourceful.
+          </p>
 
-            <p>
-              As a lifelong learner, I am always diving into new technologies
-              and frameworks, or picking up new skills, hobbies and interests,
-              as I navigate the globe. Recently, I have been learning data
-              science and engineering, ui/ux design, Typescript, WordPress,
-              Spanish and golf!
-            </p>
-
-            {/* <p>Here are a few technologies I’ve been working with recently:</p> */}
-          </div>
-
-          {/* <ul className='skills-list'>
-            {skills && skills.map((skill, i) => <li key={i}>{skill}</li>)}
-          </ul> */}
-        </StyledText>
+          <p>
+            As a lifelong learner, I am always diving into new technologies and
+            frameworks, or picking up new skills, hobbies and interests, as I
+            navigate the globe. Recently, I have been learning data science and
+            engineering, ui/ux design, Typescript, WordPress, Spanish and golf!
+          </p>
+        </div>
 
         <StyledPic>
           <div className='wrapper'>

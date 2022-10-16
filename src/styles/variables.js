@@ -45,7 +45,7 @@ const variables = css`
     --fz-heading-xxxl: 72px;
     --fz-heading-xxxxl: 80px;
 
-    --border-radius: 4px;
+    --border-radius: 10px;
     --nav-height: 100px;
     --nav-scroll-height: 70px;
 
