@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styled, { ThemeProvider } from 'styled-components'
 
 import { GlobalStyle, theme } from '@styles'
-import { NavBar, Social, Email } from '@components'
+import { NavBar, Social, Email, Footer } from '@components'
 
 const StyledContent = styled.div`
   display: flex;
@@ -61,7 +61,10 @@ const Layout = ({ children, location }) => {
           <Social isHome={isHome} />
           <Email isHome={isHome} />
 
-          <div id='content'>{children}</div>
+          <div id='content'>
+            {children}
+            <Footer />
+          </div>
         </StyledContent>
       </ThemeProvider>
     </div>

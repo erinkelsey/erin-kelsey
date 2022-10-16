@@ -3,6 +3,7 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group'
 import styled from 'styled-components'
 import { navDelay, loaderDelay } from '@utils'
 import { usePrefersReducedMotion } from '@hooks'
+// import { email } from '@config';
 
 const StyledHeroSection = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
@@ -18,7 +19,7 @@ const StyledHeroSection = styled.section`
   h1 {
     margin: 0 0 30px 4px;
     color: var(--green);
-    font-family: var(--font-heading);
+    font-family: var(--font-mono);
     font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
     font-weight: 400;
 
@@ -27,10 +28,15 @@ const StyledHeroSection = styled.section`
     }
   }
 
+  h2 {
+    max-width: 540px;
+  }
+
   h3 {
     margin-top: 10px;
     color: var(--slate);
     line-height: 0.9;
+    max-width: 540px;
   }
 
   p {
@@ -57,20 +63,34 @@ const Hero = () => {
     return () => clearTimeout(timeout)
   }, [prefersReducedMotion])
 
-  const one = <h2 className='big-heading'>Erin Kelsey</h2>
-  const two = (
-    <h3 className='big-heading'>Building and creating is what I do.</h3>
-  )
-  const three = (
+  const one = <h1>Hi, my name is</h1>
+  const two = <h2 className='big-heading'>Brittany Chiang.</h2>
+  const three = <h3 className='big-heading'>I build things for the web.</h3>
+  const four = (
     <>
       <p>
-        I am a senior software engineer (and beginner ui/ux designer), focused
-        on bringing engaging digital products to life for web and mobile.
+        I’m a software engineer specializing in building (and occasionally
+        designing) exceptional digital experiences. Currently, I’m focused on
+        building accessible, human-centered products at{' '}
+        <a href='https://upstatement.com/' target='_blank' rel='noreferrer'>
+          Upstatement
+        </a>
+        .
       </p>
     </>
   )
+  const five = (
+    <a
+      className='email-link'
+      href='https://www.newline.co/courses/build-a-spotify-connected-app'
+      target='_blank'
+      rel='noreferrer'
+    >
+      Check out my course!
+    </a>
+  )
 
-  const items = [one, two, three]
+  const items = [one, two, three, four, five]
 
   return (
     <StyledHeroSection>

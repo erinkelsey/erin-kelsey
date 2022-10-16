@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { CSSTransition, TransitionGroup } from 'react-transition-group'
 import styled from 'styled-components'
-import { loaderDelay } from '@utils'
+import { navDelay } from '@utils'
 import { usePrefersReducedMotion } from '@hooks'
 
 const StyledSideElement = styled.div`
@@ -32,9 +32,9 @@ const Side = ({ children, isHome, orientation }) => {
     if (!isHome || prefersReducedMotion) {
       return
     }
-    const timeout = setTimeout(() => setIsMounted(true), loaderDelay)
+    const timeout = setTimeout(() => setIsMounted(true), navDelay)
     return () => clearTimeout(timeout)
-  })
+  }, [prefersReducedMotion, isHome])
 
   return (
     <StyledSideElement orientation={orientation}>
@@ -45,7 +45,7 @@ const Side = ({ children, isHome, orientation }) => {
           {isMounted && (
             <CSSTransition
               classNames={isHome ? 'fade' : ''}
-              timeout={isHome ? loaderDelay : 0}
+              timeout={isHome ? navDelay : 0}
             >
               {children}
             </CSSTransition>
