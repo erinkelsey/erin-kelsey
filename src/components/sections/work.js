@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { CSSTransition } from 'react-transition-group'
 import styled from 'styled-components'
 import { Icon } from '@components/icons'
+import { WorkOther } from '@components'
 import { srConfig } from '@config'
 import { KEY_CODES } from '@utils'
 import sr from '@utils/sr'
@@ -320,7 +321,6 @@ const Work = () => {
             })}
           <StyledHighlight activeTabId={activeTabId} />
         </StyledTabList>
-
         <StyledTabPanels>
           {workData &&
             workData.map(({ node }, i) => {
@@ -343,23 +343,33 @@ const Work = () => {
                     aria-hidden={activeTabId !== i}
                     hidden={activeTabId !== i}
                   >
-                    <h3>{title}</h3>
+                    {company !== 'Other' ? (
+                      <>
+                        <h3>{title}</h3>
 
-                    <p className='range'>
-                      {range} ({location})
-                    </p>
+                        <p className='range'>
+                          {range} ({location})
+                        </p>
 
-                    <h4>
-                      {company}
-                      <a href={url} target='_blank' rel='noopener noreferrer'>
-                        <Icon name='Link' />
-                      </a>
-                    </h4>
+                        <h4>
+                          {company}
+                          <a
+                            href={url}
+                            target='_blank'
+                            rel='noopener noreferrer'
+                          >
+                            <Icon name='Link' />
+                          </a>
+                        </h4>
 
-                    <p className='description'>{description}</p>
+                        <p className='description'>{description}</p>
 
-                    <h4 className='header'>Responsibilities</h4>
-                    <div dangerouslySetInnerHTML={{ __html: html }} />
+                        <h4 className='header'>Responsibilities</h4>
+                        <div dangerouslySetInnerHTML={{ __html: html }} />
+                      </>
+                    ) : (
+                      <WorkOther />
+                    )}
                   </StyledTabPanel>
                 </CSSTransition>
               )
