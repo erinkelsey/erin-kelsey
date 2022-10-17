@@ -44,6 +44,22 @@ const TransitionStyles = css`
     opacity: 0;
     transition: opacity 300ms var(--easing);
   }
+
+  /* Transition for Modal */
+  .ReactModal__Overlay {
+    overflow: auto;
+    opacity: 0;
+    transform: translateY(-10%);
+    transition: opacity 300ms var(--easing), transform 300ms var(--easing);
+  }
+  .ReactModal__Overlay--after-open {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .ReactModal__Overlay--before-close {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
 `
 
 export default TransitionStyles

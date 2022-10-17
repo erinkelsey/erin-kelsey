@@ -1,5 +1,6 @@
 ---
 name: 'Python'
+slug: /skills/python
 usage: 'HIGH'
 used:
   - Fullstack web applications with Django and Django templates, or Flask with the Jinja template engine

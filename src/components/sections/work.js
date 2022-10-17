@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { CSSTransition } from 'react-transition-group'
 import styled from 'styled-components'
 import { Icon } from '@components/icons'
-import { WorkOther, Skill } from '@components'
+import { WorkOther, SkillIcon } from '@components'
 import { srConfig } from '@config'
 import { KEY_CODES } from '@utils'
 import sr from '@utils/sr'
@@ -384,7 +384,7 @@ const Work = () => {
                         <h4 className='header'>Technologies</h4>
                         <StyledTechnologies>
                           {technologies.map((technology) => (
-                            <Skill
+                            <SkillIcon
                               key={`${company}-${technology}`}
                               name={technology}
                             />

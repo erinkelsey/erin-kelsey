@@ -15,7 +15,6 @@ const StyledUsage = styled.div`
   padding: 10px 30px;
   border-radius: var(--border-radius);
   width: fit-content;
-  margin-top: 10px;
 `
 
 const usages = ['HIGH', 'MEDIUM', 'LOW']
