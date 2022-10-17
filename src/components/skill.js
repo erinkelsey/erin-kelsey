@@ -1,19 +1,13 @@
 import React, { useState, useRef } from 'react'
-import { Helmet } from 'react-helmet'
 import { graphql, useStaticQuery } from 'gatsby'
-import { CSSTransition } from 'react-transition-group'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 import { Icon } from '@components/icons'
+import { Usage } from '@components'
 import { useOnClickOutside } from '@hooks'
 
-const StyledSkill = styled.div`
-  // Prevent container from jumping
-  // @media (min-width: 700px) {
-  //   min-height: 100px;
-  // }
-`
+const StyledSkill = styled.div``
 
 const StyledIconButton = styled.div`
   display: flex;
@@ -41,33 +35,57 @@ const StyledIconButton = styled.div`
 
 const StyledModal = styled.div`
   @media (min-width: 769px) {
-    display: ${(props) => (props.modalOpen ? 'flex' : 'none')};
+    display: flex;
+    flex-direction: column;
     position: fixed;
-    top: 30%;
-    left: 10%;
+    top: 0;
+    right: 10%;
+    padding: 50px;
     width: 80%;
-    height: 50%;
+    height: 70%;
     outline: 0;
+    overflow: auto;
     background-color: var(--purple);
     box-shadow: -10px 0px 30px -15px var(--purple-shadow);
-    border-radius: var(--border-radius);
-    z-index: 999;
-    // transform: translateY(${(props) => (props.modalOpen ? 50 : 0)}vh);
+    border-radius: var(--modal-border-radius);
+    z-index: 9;
+    transform: translateY(${(props) => (props.modalOpen ? 35 : 0)}%);
     visibility: ${(props) => (props.modalOpen ? 'visible' : 'hidden')};
-    // transition: var(--transition);
+    transition: var(--transition);
   }
 
-  .modal-appear {
-    opacity: 0;
-    transform: translateY(-10vh);
+  .modal-section-header {
+    padding: 20px 0 10px;
   }
-  .modal-active-appear {
-    opacity: 1;
-    transform: translateY(0vh);
-    transition: opacity 300ms, transform 300ms;
+
+  ul {
+    ${({ theme }) => theme.mixins.fancyList};
+
+    li {
+      margin-bottom: 5px;
+    }
   }
-  .modal-done-appear {
-    opacity: 1;
+`
+
+const StyledModalHeader = styled.div`
+  ${({ theme }) => theme.mixins.flexBetween};
+  width: 100%;
+
+  h3 {
+    font-size: var(--fz-heading-sm);
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+
+    &:hover,
+    &:focus {
+      transition: var(--transition);
+      transform: translateY(-3px);
+      color: var(--pink);
+      cursor: pointer;
+    }
   }
 `
 
@@ -105,18 +123,16 @@ const Skill = ({ name }) => {
 
   const skillData = data.skill.edges[0].node.frontmatter
   const { usage, used, featured, practice, technologies } = skillData
+  console.log(skillData)
 
   const wrapperRef = useRef()
   useOnClickOutside(wrapperRef, () => setModalOpen(false))
+
   const buttonRef = useRef(null)
-  const detailsRef = useRef(null)
+  const modalRef = useRef(null)
 
   return (
     <StyledSkill>
-      <Helmet>
-        <body className={modalOpen ? 'blur' : ''} />
-      </Helmet>
-
       <div ref={wrapperRef}>
         <StyledIconButton
           onClick={toggleModal}
@@ -128,22 +144,33 @@ const Skill = ({ name }) => {
           <p>{name}</p>
         </StyledIconButton>
 
-        <CSSTransition
-          timeout={250}
-          classNames='modal'
-          in={modalOpen}
-          unmountOnExit
+        <StyledModal
+          modalOpen={modalOpen}
+          aria-hidden={!modalOpen}
+          tabIndex={modalOpen ? 1 : -1}
+          ref={modalRef}
         >
-          <StyledModal
-            modalOpen={modalOpen}
-            aria-hidden={!modalOpen}
-            tabIndex={modalOpen ? 1 : -1}
-          >
-            <div ref={detailsRef}>
-              <h3>{name}</h3>
+          <StyledModalHeader>
+            <h3>{name}</h3>
+            <div onClick={toggleModal}>
+              <Icon name='Close' />
             </div>
-          </StyledModal>
-        </CSSTransition>
+          </StyledModalHeader>
+
+          <Usage usage={usage} />
+
+          <h4 className='modal-section-header'>Used For</h4>
+          <ul>
+            {used &&
+              used.map((use, i) => {
+                return <li key={`${name}-${use}-${i}`}>{use}</li>
+              })}
+          </ul>
+
+          <h4 className='modal-section-header'>Featured Projects</h4>
+          <h4 className='modal-section-header'>Practice Projects</h4>
+          <h4 className='modal-section-header'>Technologies</h4>
+        </StyledModal>
       </div>
     </StyledSkill>
   )

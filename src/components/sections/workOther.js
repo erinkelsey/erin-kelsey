@@ -3,13 +3,10 @@ import { useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 
 const StyledWorkOtherItem = styled.div`
-  h4 {
-    margin-top: 5px;
-  }
-
-  .range {
-    margin-bottom: 25px;
-    margin-top: 10px;
+  h5 {
+    color: var(--pink);
+    font-size: var(--fz-lg);
+    margin: 0 0 5px;
   }
 `
 
@@ -44,7 +41,7 @@ const WorkOther = () => {
       return (
         <StyledWorkOtherItem key={`other-work-${i}`}>
           <h3>{company}</h3>
-          <h4>{title}</h4>
+          <h5>{title}</h5>
           <p className='range'>
             {range} ({location})
           </p>

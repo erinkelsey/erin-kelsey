@@ -190,7 +190,7 @@ const StyledTabPanel = styled.div`
   }
 
   .range {
-    margin-bottom: 20px;
+    margin: 0 0 20px;
     color: var(--light-slate);
     font-family: var(--font-label);
     font-size: var(--fz-sm);
