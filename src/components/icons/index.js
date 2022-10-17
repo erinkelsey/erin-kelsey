@@ -1,4 +1,5 @@
 export { default as Icon } from './icon'
+export { default as IconClose } from './close'
 export { default as IconDataCamp } from './datacamp'
 export { default as IconFigma } from './figma'
 export { default as IconGitHub } from './github'

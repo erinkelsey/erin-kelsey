@@ -67,7 +67,7 @@ const Hero = () => {
       <p>
         {isEnglish
           ? 'I am a senior software engineer (and beginner ui/ux designer), focused on bringing engaging digital products to life for web and mobile.'
-          : 'Soy ingeniera de software sénior (y diseñadora principiante de ui/ux) y me especializo en la creación de increíbles productos digitales para web y móvil.'}
+          : 'Soy ingeniera de software sénior (y diseñadora principiante de ui/ux) y me especializo en la creación de productos digitales para web y móvil.'}
       </p>
     </>
   )
@@ -87,16 +87,14 @@ const Hero = () => {
           {isMounted &&
             items.map((item, i) => (
               <CSSTransition key={i} classNames='fadeup' timeout={loaderDelay}>
-                <CSSTransition key={isEnglish} classNames='fade' timeout={10}>
-                  <div
-                    style={{ transitionDelay: `${i + 1}00ms` }}
-                    onMouseEnter={() => setIsEnglish(false)}
-                    onMouseLeave={() => setIsEnglish(true)}
-                    role='presentation'
-                  >
-                    {item}
-                  </div>
-                </CSSTransition>
+                <div
+                  style={{ transitionDelay: `${i + 1}00ms` }}
+                  onMouseEnter={() => setIsEnglish(false)}
+                  onMouseLeave={() => setIsEnglish(true)}
+                  role='presentation'
+                >
+                  {item}
+                </div>
               </CSSTransition>
             ))}
         </TransitionGroup>

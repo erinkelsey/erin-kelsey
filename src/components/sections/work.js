@@ -20,8 +20,8 @@ const StyledWorkSection = styled.section`
     }
 
     // Prevent container from jumping
-    @media (min-width: 700px) {
-      min-height: 340px;
+    @media (min-width: 769px) {
+      min-height: 700px;
     }
   }
 `
@@ -205,6 +205,12 @@ const StyledTabPanel = styled.div`
   }
 `
 
+const StyledTechnologies = styled.div`
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 10px;
+`
+
 const Work = () => {
   const data = useStaticQuery(graphql`
     query {
@@ -376,11 +382,14 @@ const Work = () => {
                         <div dangerouslySetInnerHTML={{ __html: html }} />
 
                         <h4 className='header'>Technologies</h4>
-                        <>
+                        <StyledTechnologies>
                           {technologies.map((technology) => (
-                            <Skill key={technology} name={technology} />
+                            <Skill
+                              key={`${company}-${technology}`}
+                              name={technology}
+                            />
                           ))}
-                        </>
+                        </StyledTechnologies>
                       </>
                     ) : (
                       <WorkOther />

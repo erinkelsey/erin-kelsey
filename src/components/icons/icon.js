@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {
+  IconClose,
   IconDataCamp,
   IconFigma,
   IconGitHub,
@@ -13,6 +14,8 @@ import {
 
 const Icon = ({ name }) => {
   switch (name) {
+    case 'Close':
+      return <IconClose />
     case 'DataCamp':
       return <IconDataCamp />
     case 'Figma':
@@ -29,8 +32,7 @@ const Icon = ({ name }) => {
       return <IconPython />
     case 'Udemy':
       return <IconUdemy />
-    // default:
-    //   return <IconExternal />;
+    // change
     default:
       return <IconLogo />
   }

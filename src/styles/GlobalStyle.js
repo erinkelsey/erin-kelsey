@@ -276,10 +276,10 @@ const GlobalStyle = createGlobalStyle`
     font-family: var(--font-body);
     font-size: clamp(var(--fz-md), 2vw, var(--fz-xl));
 
-    // &:last-child,
-    // &:last-of-type {
-    //   margin: 0;
-    // }
+    &:last-child,
+    &:last-of-type {
+      margin: 0;
+    }
 
     // & > a {
     //   ${({ theme }) => theme.mixins.inlineLink};
