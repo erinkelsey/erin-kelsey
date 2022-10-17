@@ -281,9 +281,9 @@ const GlobalStyle = createGlobalStyle`
     //   margin: 0;
     // }
 
-    & > a {
-      ${({ theme }) => theme.mixins.inlineLink};
-    }
+    // & > a {
+    //   ${({ theme }) => theme.mixins.inlineLink};
+    // }
   }
 
   ul {

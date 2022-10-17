@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { CSSTransition } from 'react-transition-group'
 import styled from 'styled-components'
+import { Icon } from '@components/icons'
 import { srConfig } from '@config'
 import { KEY_CODES } from '@utils'
 import sr from '@utils/sr'
@@ -159,12 +160,30 @@ const StyledTabPanel = styled.div`
 
   h3 {
     margin-bottom: 2px;
-    font-size: var(--fz-xxl);
-    font-weight: 500;
+    font-size: var(--fz-heading-xs);
+    color: var(--green);
     line-height: 1.3;
+  }
 
-    .company {
-      color: var(--green);
+  h4 {
+    font-size: var(--fx-lg);
+    color: var(--pink);
+    margin: 0;
+
+    a {
+      padding: 10px;
+      color: var(--slate);
+
+      &:hover,
+      &:focus {
+        transform: translateY(-3px);
+        color: var(--pink);
+      }
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
     }
   }
 
@@ -172,7 +191,16 @@ const StyledTabPanel = styled.div`
     margin-bottom: 25px;
     color: var(--light-slate);
     font-family: var(--font-label);
-    font-size: var(--fz-xs);
+    font-size: var(--fz-sm);
+  }
+
+  .description {
+    font-size: var(--fz-md);
+    margin-bottom: 20px;
+  }
+
+  .header {
+    margin-bottom: 10px;
   }
 `
 
@@ -191,6 +219,7 @@ const Work = () => {
               location
               range
               url
+              description
             }
             html
           }
@@ -296,7 +325,8 @@ const Work = () => {
           {workData &&
             workData.map(({ node }, i) => {
               const { frontmatter, html } = node
-              const { title, url, company, range } = frontmatter
+              const { title, url, company, range, location, description } =
+                frontmatter
 
               return (
                 <CSSTransition
@@ -313,18 +343,22 @@ const Work = () => {
                     aria-hidden={activeTabId !== i}
                     hidden={activeTabId !== i}
                   >
-                    <h3>
-                      <span>{title}</span>
-                      <span className='company'>
-                        &nbsp;@&nbsp;
-                        <a href={url} className='inline-link'>
-                          {company}
-                        </a>
-                      </span>
-                    </h3>
+                    <h3>{title}</h3>
 
-                    <p className='range'>{range}</p>
+                    <p className='range'>
+                      {range} ({location})
+                    </p>
 
+                    <h4>
+                      {company}
+                      <a href={url} target='_blank' rel='noopener noreferrer'>
+                        <Icon name='Link' />
+                      </a>
+                    </h4>
+
+                    <p className='description'>{description}</p>
+
+                    <h4 className='header'>Responsibilities</h4>
                     <div dangerouslySetInnerHTML={{ __html: html }} />
                   </StyledTabPanel>
                 </CSSTransition>
