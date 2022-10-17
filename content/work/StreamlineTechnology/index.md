@@ -6,6 +6,8 @@ description: 'Brand-new, small-scale startup, focused on providing a cloud-based
 location: 'Remote'
 range: '2018 - 2022'
 url: 'https://streamtechapp.com'
+technologies:
+  - Python
 ---
 
 - Design, develop, test, debug, deploy, maintain, and document all aspects of the development stack

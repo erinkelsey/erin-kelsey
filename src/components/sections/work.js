@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { CSSTransition } from 'react-transition-group'
 import styled from 'styled-components'
 import { Icon } from '@components/icons'
-import { WorkOther } from '@components'
+import { WorkOther, Skill } from '@components'
 import { srConfig } from '@config'
 import { KEY_CODES } from '@utils'
 import sr from '@utils/sr'
@@ -169,7 +169,8 @@ const StyledTabPanel = styled.div`
   h4 {
     font-size: var(--fx-lg);
     color: var(--pink);
-    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 0;
 
     a {
       padding: 10px;
@@ -189,7 +190,7 @@ const StyledTabPanel = styled.div`
   }
 
   .range {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
     color: var(--light-slate);
     font-family: var(--font-label);
     font-size: var(--fz-sm);
@@ -197,7 +198,6 @@ const StyledTabPanel = styled.div`
 
   .description {
     font-size: var(--fz-md);
-    margin-bottom: 20px;
   }
 
   .header {
@@ -221,6 +221,7 @@ const Work = () => {
               range
               url
               description
+              technologies
             }
             html
           }
@@ -325,8 +326,15 @@ const Work = () => {
           {workData &&
             workData.map(({ node }, i) => {
               const { frontmatter, html } = node
-              const { title, url, company, range, location, description } =
-                frontmatter
+              const {
+                title,
+                url,
+                company,
+                range,
+                location,
+                description,
+                technologies,
+              } = frontmatter
 
               return (
                 <CSSTransition
@@ -366,6 +374,13 @@ const Work = () => {
 
                         <h4 className='header'>Responsibilities</h4>
                         <div dangerouslySetInnerHTML={{ __html: html }} />
+
+                        <h4 className='header'>Technologies</h4>
+                        <>
+                          {technologies.map((technology) => (
+                            <Skill key={technology} name={technology} />
+                          ))}
+                        </>
                       </>
                     ) : (
                       <WorkOther />

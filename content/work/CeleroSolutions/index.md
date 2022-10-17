@@ -6,6 +6,8 @@ description: 'A leading provider of banking, security, payments, cloud and finte
 location: 'Remote'
 range: '2015 - 2017'
 url: 'https://celero.ca'
+technologies:
+  - Python
 ---
 
 - Support the banking platform used by the company’s clients (Fiserv DNA), by resolving production issues, implementing upgrades, and performing maintenance and testing

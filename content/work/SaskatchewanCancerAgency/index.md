@@ -6,6 +6,8 @@ description: 'Operates cancer prevention and early detection programs, conducts 
 location: 'Regina, Canada'
 range: '2014 - 2015'
 url: 'http://saskcancer.ca'
+technologies:
+  - Python
 ---
 
 - Provide technical support, in a healthcare setting, for computer systems, network users, and numerous software applications

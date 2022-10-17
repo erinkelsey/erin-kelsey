@@ -6,6 +6,8 @@ description: 'One of the top research-intensive, medical doctoral universities i
 location: 'Saskatoon, Canada'
 range: '2012 - 2013'
 url: 'https://www.usask.ca'
+technologies:
+  - Python
 ---
 
 - Extend the functionality of an existing Django web application, consisting of an online toolset for retrieving, collating and saving versions of textual documents to a database
