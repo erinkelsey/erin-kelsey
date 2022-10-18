@@ -1,11 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql, useStaticQuery } from 'gatsby'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import Modal from 'react-modal'
 
 import { Icon } from '@components/icons'
-import { Usage } from '@components'
+import { Usage, SkillModalFeatured } from '@components'
 
 const modalStyles = {
   overlay: {
@@ -69,12 +69,9 @@ const StyledModalBody = styled.div`
 
 const SkillModal = ({ name, isOpen, toggle }) => {
   const data = useStaticQuery(graphql`
-    query ($name: String) {
-      skill: allMarkdownRemark(
-        filter: {
-          fileAbsolutePath: { regex: "content/skills/" }
-          frontmatter: { name: { eq: $name } }
-        }
+    query {
+      skills: allMarkdownRemark(
+        filter: { fileAbsolutePath: { regex: "content/skills/" } }
       ) {
         edges {
           node {
@@ -95,8 +92,9 @@ const SkillModal = ({ name, isOpen, toggle }) => {
     }
   `)
 
-  const skillData = data.skill.edges[0].node.frontmatter
-  const { usage, used, featured, practice, technologies } = skillData
+  const { usage, used, featured, practice, technologies } =
+    data.skills.edges.find((el) => el.node.frontmatter.name === name).node
+      .frontmatter
 
   return (
     <Modal
@@ -122,12 +120,19 @@ const SkillModal = ({ name, isOpen, toggle }) => {
         <h4 className='modal-section-header'>Used For</h4>
         <ul>
           {used &&
-            used.map((use, i) => {
-              return <li key={`${name}-${use}-${i}`}>{use}</li>
-            })}
+            used.map((use, i) => <li key={`${name}-${use}-${i}`}>{use}</li>)}
         </ul>
 
         <h4 className='modal-section-header'>Featured Projects</h4>
+
+        {featured &&
+          featured.map((projectName, i) => (
+            <SkillModalFeatured
+              key={`${name}-${projectName}-${i}`}
+              projectName={projectName}
+            />
+          ))}
+
         <h4 className='modal-section-header'>Practice Projects</h4>
         <div>
           {practice &&

@@ -390,7 +390,7 @@ const GlobalStyle = createGlobalStyle`
 
   .react-modal-responsive {
     max-width: 60%;
-    margin: 10% auto;
+    margin: 5% auto;
     padding: 40px;
     bottom: auto;
 
