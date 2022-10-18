@@ -10,6 +10,7 @@ import { Usage } from '@components'
 const modalStyles = {
   overlay: {
     backgroundColor: 'rgba(0, 0, 0, 0.58)',
+    zIndex: '9999',
   },
   content: {
     position: 'relative',
@@ -17,35 +18,10 @@ const modalStyles = {
     left: 'auto',
     right: 'auto',
     bottom: 'auto',
-    // maxWidth: '60%',
-    // margin: '10% auto',
-    padding: '40px',
     border: 0,
     backgroundColor: 'var(--purple)',
   },
 }
-
-// const StyledModal = styled.div`
-//   .modal-responsive {
-//     max-width: 60%;
-//     margin: 10% auto;
-
-//     @media (max-width: 768px) {
-//       max-width: 80%;
-//       margin: 0;
-//     }
-//   }
-// `
-
-// const ModalStyles = css`
-//   .modal-responsive {
-//     max-width: 60%;
-
-//     @media (max-width: 768px) {
-//       max-width: 80%;
-//     }
-//   }
-// `
 
 const StyledModalHeader = styled.div`
   ${({ theme }) => theme.mixins.flexBetween};
