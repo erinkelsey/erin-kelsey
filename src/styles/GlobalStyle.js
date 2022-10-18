@@ -388,6 +388,16 @@ const GlobalStyle = createGlobalStyle`
     height: 100%;
   }
 
+  .react-modal-responsive {
+    max-width: 60%;
+    margin: 10% auto;
+
+    @media (max-width: 768px) {
+      max-width: 100%;
+      margin: 0;
+    }
+  }
+
   ${TransitionStyles};
 
 `

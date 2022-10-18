@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql, useStaticQuery } from 'gatsby'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import Modal from 'react-modal'
 
 import { Icon } from '@components/icons'
@@ -17,13 +17,35 @@ const modalStyles = {
     left: 'auto',
     right: 'auto',
     bottom: 'auto',
-    maxWidth: '60%',
-    margin: '10% auto',
+    // maxWidth: '60%',
+    // margin: '10% auto',
     padding: '40px',
     border: 0,
     backgroundColor: 'var(--purple)',
   },
 }
+
+// const StyledModal = styled.div`
+//   .modal-responsive {
+//     max-width: 60%;
+//     margin: 10% auto;
+
+//     @media (max-width: 768px) {
+//       max-width: 80%;
+//       margin: 0;
+//     }
+//   }
+// `
+
+// const ModalStyles = css`
+//   .modal-responsive {
+//     max-width: 60%;
+
+//     @media (max-width: 768px) {
+//       max-width: 80%;
+//     }
+//   }
+// `
 
 const StyledModalHeader = styled.div`
   ${({ theme }) => theme.mixins.flexBetween};
@@ -106,6 +128,10 @@ const SkillModal = ({ name, isOpen, toggle }) => {
       onRequestClose={toggle}
       style={modalStyles}
       closeTimeoutMS={200}
+      // don't allow scrolling for background
+      onAfterOpen={() => (document.body.style.overflow = 'hidden')}
+      onAfterClose={() => (document.body.style.overflow = 'unset')}
+      className='react-modal-responsive'
     >
       <StyledModalHeader>
         <h3>{name}</h3>
@@ -135,7 +161,17 @@ const SkillModal = ({ name, isOpen, toggle }) => {
                 <ul>
                   {projects &&
                     projects.map((project, i) => {
-                      return <li key={`${name}-${project}-${i}`}>{project}</li>
+                      return (
+                        <li key={`${name}-${project}-${i}`}>
+                          <a
+                            href={project}
+                            target='_blank'
+                            rel='noopener noreferrer'
+                          >
+                            {project}
+                          </a>
+                        </li>
+                      )
                     })}
                 </ul>
               </div>
