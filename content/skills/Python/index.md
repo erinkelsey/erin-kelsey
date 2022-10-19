@@ -1,6 +1,7 @@
 ---
 name: 'Python'
 usage: 'HIGH'
+modal: 'Python'
 used:
   - Fullstack web applications with Django and Django templates, or Flask with the Jinja template engine
   - REST APIs with Django REST Framework
@@ -22,7 +23,7 @@ practice:
     projects:
       - https://github.com/erinkelsey/datascience-python
       - https://github.com/erinkelsey/datascience-basics
-technologies:
+related:
   - Django
   - Pandas
   - Numpy

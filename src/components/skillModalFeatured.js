@@ -84,8 +84,6 @@ const SkillModalFeatured = ({ projectName }) => {
   ).node.frontmatter
   const image = getImage(logo)
 
-  console.log(data)
-
   return (
     <StyledFeatured>
       <div className='modal-project-featured'>

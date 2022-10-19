@@ -84,7 +84,7 @@ const SkillModal = ({ name, isOpen, toggle }) => {
                 name
                 projects
               }
-              technologies
+              related
             }
           }
         }
@@ -92,9 +92,9 @@ const SkillModal = ({ name, isOpen, toggle }) => {
     }
   `)
 
-  const { usage, used, featured, practice, technologies } =
-    data.skills.edges.find((el) => el.node.frontmatter.name === name).node
-      .frontmatter
+  const { usage, used, featured, practice, related } = data.skills.edges.find(
+    (el) => el.node.frontmatter.name === name
+  ).node.frontmatter
 
   return (
     <Modal

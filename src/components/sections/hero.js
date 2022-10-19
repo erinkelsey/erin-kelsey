@@ -29,12 +29,12 @@ const StyledHeroSection = styled.section`
   }
 
   h3 {
-    margin-top: 15px;
+    margin: 15px 0;
     line-height: 0.9;
   }
 
   p {
-    margin: 30px 0 0;
+    // margin: 30px 0 0;
     max-width: 1000px;
   }
 `
