@@ -3,33 +3,56 @@ import PropTypes from 'prop-types'
 import {
   IconActiveDirectory,
   IconAndroid,
+  IconAndroidStudio,
   IconApollo,
   IconAppStore,
   IconAWS,
   IconBash,
   IconBootstrap,
+  IconBulma,
   IconCelery,
+  IconCitrix,
   IconClose,
   IconCodeMagic,
+  IconCSharp,
   IconCSS,
   IconDart,
   IconDataCamp,
+  IconDenoJS,
   IconDjango,
   IconDocker,
+  IconEclipse,
+  IconExchange,
+  IconExpress,
   IconFigma,
+  IconFirebase,
+  IconFlask,
   IconFlutter,
   IconGatsbyJS,
+  IconGCP,
   IconGitHub,
   IconGraphQL,
+  IconHeroku,
   IconHTML,
   IconIllustrator,
+  IconInsomnia,
   IconInstagram,
   IconIOS,
   IconJavaScript,
+  IconJest,
+  IconJinja,
+  IconJira,
+  IconJupyter,
   IconLightroom,
   IconLink,
   IconLogo,
+  IconMaterialUI,
   IconMobileIron,
+  IconMongoDB,
+  IconMySQL,
+  IconNetlify,
+  IconNodeJS,
+  IconNPM,
   IconNumpy,
   IconOracle,
   IconPandas,
@@ -45,6 +68,7 @@ import {
   IconRedux,
   IconREST,
   IconSASS,
+  IconSharePoint,
   IconSQL,
   IconSQLServer,
   IconStripe,
@@ -66,13 +90,15 @@ import {
 
 const Icon = ({ name }) => {
   switch (name) {
-    case 'ActiveDirectory':
+    case 'Active Directory':
       return <IconActiveDirectory />
     case 'Android':
       return <IconAndroid />
+    case 'Android Studio':
+      return <IconAndroidStudio />
     case 'Apollo':
       return <IconApollo />
-    case 'AppStore':
+    case 'App Store Connect':
       return <IconAppStore />
     case 'AWS':
       return <IconAWS />
@@ -80,50 +106,96 @@ const Icon = ({ name }) => {
       return <IconBash />
     case 'Bootstrap':
       return <IconBootstrap />
-    case 'Celery':
+    case 'Bulma':
+      return <IconBulma />
+    case 'Celery & Celery Beat':
       return <IconCelery />
+    case 'Citrix':
+      return <IconCitrix />
     case 'Close':
       return <IconClose />
     case 'CodeMagic':
       return <IconCodeMagic />
+    case 'C #':
+      return <IconCSharp />
     case 'CSS':
       return <IconCSS />
     case 'Dart':
       return <IconDart />
     case 'DataCamp':
       return <IconDataCamp />
+    case 'DenoJS':
+      return <IconDenoJS />
     case 'Django':
       return <IconDjango />
     case 'Docker':
       return <IconDocker />
+    case 'Eclipse':
+      return <IconEclipse />
+    case 'Exchange':
+      return <IconExchange />
+    case 'Express':
+      return <IconExpress />
     case 'Figma':
       return <IconFigma />
+    case 'Firebase':
+      return <IconFirebase />
+    case 'Flask':
+      return <IconFlask />
     case 'Flutter':
       return <IconFlutter />
     case 'GatsbyJS':
       return <IconGatsbyJS />
+    case 'GCP':
+      return <IconGCP />
     case 'GitHub':
       return <IconGitHub />
     case 'GraphQL':
       return <IconGraphQL />
+    case 'Heroku':
+      return <IconHeroku />
     case 'HTML':
       return <IconHTML />
     case 'Illustrator':
       return <IconIllustrator />
+    case 'Insomnia':
+      return <IconInsomnia />
     case 'Instagram':
       return <IconInstagram />
-    case 'IOS':
+    case 'iOS':
       return <IconIOS />
     case 'JavaScript':
       return <IconJavaScript />
+    case 'Jest':
+      return <IconJest />
+    case 'Jinja':
+      return <IconJinja />
+    case 'Jira':
+      return <IconJira />
+    case 'Jupyter':
+      return <IconJupyter />
     case 'Lightroom':
       return <IconLightroom />
     case 'Link':
       return <IconLink />
     case 'Logo':
       return <IconLogo />
+    case 'MaterialUI':
+      return <IconMaterialUI />
     case 'MobileIron':
       return <IconMobileIron />
+    case 'MongoDB':
+      return <IconMongoDB />
+    case 'MySQL':
+      return <IconMySQL />
+    case 'Netlify':
+      return <IconNetlify />
+    case 'NodeJS':
+      return <IconNodeJS />
+    case 'npm':
+      return <IconNPM />
+    case 'SharePoint':
+      return <IconSharePoint />
     case 'Numpy':
       return <IconNumpy />
     case 'Oracle':
@@ -132,7 +204,7 @@ const Icon = ({ name }) => {
       return <IconPandas />
     case 'Photoshop':
       return <IconPhotoshop />
-    case 'PlayStore':
+    case 'Google Play Store':
       return <IconPlayStore />
     case 'PostgreSQL':
       return <IconPostgreSQL />
@@ -144,7 +216,7 @@ const Icon = ({ name }) => {
       return <IconPython />
     case 'React':
       return <IconReact />
-    case 'ReactRouter':
+    case 'React Router':
       return <IconReactRouter />
     case 'Redis':
       return <IconRedis />
@@ -170,13 +242,13 @@ const Icon = ({ name }) => {
       return <IconTachyons />
     case 'Terminal':
       return <IconTerminal />
-    case 'TravisCI':
+    case 'Travis CI':
       return <IconTravisCI />
     case 'TypeScript':
       return <IconTypeScript />
     case 'Udemy':
       return <IconUdemy />
-    case 'VisualStudio':
+    case 'Visual Studio':
       return <IconVisualStudio />
     case 'VSCode':
       return <IconVSCode />

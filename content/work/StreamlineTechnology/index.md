@@ -8,6 +8,33 @@ range: '2018 - 2022'
 url: 'https://streamtechapp.com'
 technologies:
   - Python
+  - Django
+  - AWS
+  - Flutter
+  - Dart
+  - PostgreSQL
+  - GraphQL
+  - REST
+  - Docker
+  - Celery & Celery Beat
+  - CodeMagic
+  - Travis CI
+  - Redis
+  - GitHub
+  - XD
+  - SQL
+  - iOS
+  - Android
+  - Insomnia
+  - Postman
+  - VSCode
+  - App Store Connect
+  - Google Play Console
+  - Firebase
+  - HTML
+  - JavaScript
+  - Bootstrap
+  - CSS
 ---
 
 - Design, develop, test, debug, deploy, maintain, and document all aspects of the development stack

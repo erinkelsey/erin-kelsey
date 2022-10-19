@@ -93,12 +93,12 @@ const SkillModalFeatured = ({ projectName }) => {
           <div className='modal-project-featured-icons'>
             {ios && (
               <a href={ios} target='_blank' rel='noreferrer'>
-                <Icon name='AppStore' />
+                <Icon name='App Store Connect' />
               </a>
             )}
             {android && (
               <a href={android} target='_blank' rel='noreferrer'>
-                <Icon name='PlayStore' />
+                <Icon name='Google Play Console' />
               </a>
             )}
             {external && (
