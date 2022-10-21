@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import Modal from 'react-modal'
 
 import { Icon } from '@components/icons'
-import { Usage, SkillModalFeatured } from '@components'
+import { Usage, SkillModalFeatured, SkillIcon } from '@components'
 
 const modalStyles = {
   overlay: {
@@ -65,6 +65,21 @@ const StyledModalBody = styled.div`
     font-size: var(--fz-md);
     font-family: var(--font-label);
   }
+
+  a {
+    &:hover,
+    &:focus {
+      transition: var(--transition);
+      transform: translateY(-3px);
+      color: var(--pink);
+    }
+  }
+`
+
+const StyledRelated = styled.div`
+  display: grid;
+  grid-template-columns: repeat(5, 2fr);
+  grid-gap: 10px;
 `
 
 const SkillModal = ({ name, isOpen, toggle }) => {
@@ -117,49 +132,66 @@ const SkillModal = ({ name, isOpen, toggle }) => {
       <StyledModalBody>
         <Usage usage={usage} />
 
-        <h4 className='modal-section-header'>Used For</h4>
+        <h4 className='modal-section-header'>Uses</h4>
         <ul>
           {used &&
             used.map((use, i) => <li key={`${name}-${use}-${i}`}>{use}</li>)}
         </ul>
 
-        <h4 className='modal-section-header'>Featured Projects</h4>
-
-        {featured &&
-          featured.map((projectName, i) => (
-            <SkillModalFeatured
-              key={`${name}-${projectName}-${i}`}
-              projectName={projectName}
-            />
-          ))}
-
-        <h4 className='modal-section-header'>Practice Projects</h4>
-        <div>
-          {practice &&
-            practice.map(({ name, projects }, i) => (
-              <div key={`${name}-practice-${i}`}>
-                <h5>{name}</h5>
-                <ul>
-                  {projects &&
-                    projects.map((project, i) => {
-                      return (
-                        <li key={`${name}-${project}-${i}`}>
-                          <a
-                            href={project}
-                            target='_blank'
-                            rel='noopener noreferrer'
-                          >
-                            {project}
-                          </a>
-                        </li>
-                      )
-                    })}
-                </ul>
-              </div>
+        {featured && featured.length > 0 && (
+          <>
+            <h4 className='modal-section-header'>Featured Projects</h4>
+            {featured.map((projectName, i) => (
+              <SkillModalFeatured
+                key={`${name}-${projectName}-${i}`}
+                projectName={projectName}
+              />
             ))}
-        </div>
+          </>
+        )}
 
-        <h4 className='modal-section-header'>Technologies</h4>
+        {practice && practice.length > 0 && (
+          <>
+            <h4 className='modal-section-header'>Practice Projects</h4>
+            <div>
+              {practice.map(({ name, projects }, i) => (
+                <div key={`${name}-practice-${i}`}>
+                  {name !== 'all' && <h5>{name}</h5>}
+                  <ul>
+                    {projects &&
+                      projects.map((project, i) => {
+                        return (
+                          <li key={`${name}-${project}-${i}`}>
+                            <a
+                              href={project}
+                              target='_blank'
+                              rel='noopener noreferrer'
+                            >
+                              {project}
+                            </a>
+                          </li>
+                        )
+                      })}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </>
+        )}
+
+        {related && related.length > 0 && (
+          <>
+            <h4 className='modal-section-header'>Related</h4>
+
+            <StyledRelated>
+              {related.map((technology, i) => {
+                return (
+                  <SkillIcon key={`${technology}-${i}`} name={technology} />
+                )
+              })}
+            </StyledRelated>
+          </>
+        )}
       </StyledModalBody>
     </Modal>
   )

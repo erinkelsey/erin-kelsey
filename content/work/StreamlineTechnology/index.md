@@ -16,7 +16,7 @@ technologies:
   - GraphQL
   - REST
   - Docker
-  - Celery & Celery Beat
+  - Celery
   - CodeMagic
   - Travis CI
   - Redis

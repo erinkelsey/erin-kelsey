@@ -1,11 +1,10 @@
 ---
-date: '1'
-name: 'MemCards'
-cover: './logo.jpg'
-logo: './logo.jpg'
-ios: 'https://apps.apple.com/gh/app/streamtech/id1569923260'
-android: 'https://play.google.com/store/apps/details?id=com.streamtechapp.app'
-show: true
+date: '4'
+name: 'Resume'
+cover: './logo.png'
+logo: './logo.png'
+external: 'https://erinkelsey.io'
+show: false
 technologies:
   - Python
 ---

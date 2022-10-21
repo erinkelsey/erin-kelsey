@@ -21,5 +21,5 @@ related:
   - Python
   - Django REST Framework
   - Graphene
-  - Celery & Celery Beat
+  - Celery
 ---

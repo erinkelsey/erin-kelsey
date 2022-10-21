@@ -25,12 +25,11 @@ practice:
       - https://github.com/erinkelsey/datascience-basics
 related:
   - Django
-  - Pandas
-  - Numpy
+  - Data Science & Engineering
   - Django REST Framework
   - Graphene
   - SQLAlchemy
-  - Celery & Celery Beat
+  - Celery
   - Jinja
   - Jupyter
 ---

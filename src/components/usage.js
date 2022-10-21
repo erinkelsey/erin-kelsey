@@ -7,7 +7,7 @@ const StyledUsage = styled.div`
     props.usage === 'HIGH'
       ? 'var(--pink)'
       : props.usage === 'MEDIUM'
-      ? 'var(--pink-tint)'
+      ? 'var(--dark-slate)'
       : 'var(--light-slate)'};
   color: var(--purple);
   font-size: var(--fz-xxxs);

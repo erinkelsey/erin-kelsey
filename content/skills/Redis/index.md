@@ -17,5 +17,5 @@ practice:
 related:
   - MongoDB
   - AWS
-  - Celery & Celery Beat
+  - Celery
 ---

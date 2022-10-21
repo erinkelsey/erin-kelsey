@@ -108,7 +108,7 @@ const Icon = ({ name }) => {
       return <IconBootstrap />
     case 'Bulma':
       return <IconBulma />
-    case 'Celery & Celery Beat':
+    case 'Celery':
       return <IconCelery />
     case 'Citrix':
       return <IconCitrix />
@@ -204,7 +204,7 @@ const Icon = ({ name }) => {
       return <IconPandas />
     case 'Photoshop':
       return <IconPhotoshop />
-    case 'Google Play Store':
+    case 'Google Play Console':
       return <IconPlayStore />
     case 'PostgreSQL':
       return <IconPostgreSQL />

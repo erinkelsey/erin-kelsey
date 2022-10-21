@@ -9,7 +9,7 @@ const StyledIconButton = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 50px;
+  width: 100px;
 
   &:hover,
   &:focus {
@@ -26,6 +26,7 @@ const StyledIconButton = styled.div`
 
   p {
     font-size: var(--fz-sm);
+    text-align: center;
   }
 `
 

@@ -4,6 +4,7 @@ name: 'Emjinx'
 cover: './logo.jpg'
 logo: './logo.jpg'
 external: 'https://emjinx.com'
+show: true
 technologies:
   - Python
 ---

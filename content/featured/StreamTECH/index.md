@@ -6,6 +6,7 @@ logo: './logo.jpg'
 external: 'https://streamtechapp.com'
 ios: 'https://apps.apple.com/gh/app/streamtech/id1569923260'
 android: 'https://play.google.com/store/apps/details?id=com.streamtechapp.app'
+show: true
 technologies:
   - Python
 ---
