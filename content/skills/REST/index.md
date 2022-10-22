@@ -1,7 +1,6 @@
 ---
 name: 'REST'
 usage: 'HIGH'
-modal: 'REST'
 used:
   - Backend and frontend web and mobile applications
   - Connect to existing REST APIs with frameworks, such as Flutter and React with Axios or Fetch API

@@ -1,7 +1,6 @@
 ---
 name: 'AWS'
 usage: 'HIGH'
-modal: 'AWS'
 used:
   - Services for deployment of web and mobile applications
   - Simple Storage Service (S3) for document storage and static website hosting

@@ -1,7 +1,6 @@
 ---
 name: 'JavaScript'
 usage: 'HIGH'
-modal: 'JavaScript'
 used:
   - Building frontend web applications with React
   - Building websites with GatsbyJS

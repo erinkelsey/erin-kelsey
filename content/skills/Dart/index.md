@@ -1,7 +1,6 @@
 ---
 name: 'Dart'
 usage: 'HIGH'
-modal: 'Dart'
 used:
   - Building web and mobile applications, including both iOS and Android, using Google’s Flutter SDK.
 featured:

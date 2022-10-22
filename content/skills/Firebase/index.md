@@ -1,7 +1,6 @@
 ---
 name: 'Firebase'
 usage: 'MEDIUM'
-modal: 'Firebase'
 used:
   - Services for deployment of web and mobile applications
   - Hosting for web applications and static websites

@@ -1,7 +1,6 @@
 ---
 name: 'Redis'
 usage: 'LOW'
-modal: 'Redis'
 used:
   - NoSQL database for web and mobile applications
   - Message broker for task queues, such as Celery

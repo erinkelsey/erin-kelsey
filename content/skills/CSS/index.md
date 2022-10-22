@@ -1,7 +1,6 @@
 ---
 name: 'CSS'
 usage: 'HIGH'
-modal: 'CSS'
 used:
   - Styling websites, landing pages and web applications, using a variety of frameworks and UIs; some of these include, SASS, Bulma, Tachyons, Styled Components, Bootstrap and Material UI
 featured:

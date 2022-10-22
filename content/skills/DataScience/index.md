@@ -1,6 +1,6 @@
 ---
-name: 'Python'
-usage: 'HIGH'
+name: 'Data Science & Engineering'
+usage: 'LOW'
 used:
   - Fullstack web applications with Django and Django templates, or Flask with the Jinja template engine
   - REST APIs with Django REST Framework

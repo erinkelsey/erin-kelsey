@@ -1,7 +1,6 @@
 ---
 name: 'Flutter'
 usage: 'HIGH'
-modal: 'Flutter'
 used:
   - Building web and cross-platform mobile applications, with a single codebase.
 featured:

@@ -1,7 +1,6 @@
 ---
 name: 'Django'
 usage: 'HIGH'
-modal: 'Django'
 used:
   - Fullstack web applications with Django and Django templates
   - REST APIs with Django REST Framework

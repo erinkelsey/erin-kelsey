@@ -1,7 +1,6 @@
 ---
 name: 'Celery'
 usage: 'MEDIUM'
-modal: 'Celery'
 used:
   - Task manager for implementing notification systems and scheduled tasks for web and mobile apps
   - Creating tasks to run when a specific user interaction has happened, for example send in-app and/or email notifications when a user signs up for an app

@@ -1,7 +1,6 @@
 ---
 name: 'GraphQL'
 usage: 'HIGH'
-modal: 'GraphQL'
 used:
   - Backend and frontend web and mobile applications
   - Connect to existing GraphQL APIs with frameworks, such as React with Apollo, and Flutter with GraphQL Flutter

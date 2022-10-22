@@ -1,7 +1,6 @@
 ---
 name: 'HTML'
 usage: 'HIGH'
-modal: 'HTML'
 used:
   - Building websites, landing pages and web applications, for both professional and personal projects
 featured:

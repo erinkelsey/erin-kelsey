@@ -1,7 +1,6 @@
 ---
 name: 'SQL'
 usage: 'HIGH'
-modal: 'SQL'
 used:
   - Create queries, in order to have a clearer view of the data within a relational database
   - Create scripts to analyze data in relational databases

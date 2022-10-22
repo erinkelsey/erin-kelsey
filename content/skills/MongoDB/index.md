@@ -1,7 +1,6 @@
 ---
 name: 'MongoDB'
 usage: 'LOW'
-modal: 'MongoDB'
 used:
   - NoSQL database for web and mobile applications
 practice:
