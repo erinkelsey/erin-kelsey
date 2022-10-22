@@ -18,4 +18,4 @@ Location: http://localhost:8000
 
 Locally:
 
-        $ gatsby server
+        $ gatsby serve
