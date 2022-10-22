@@ -18,5 +18,5 @@ related:
   - Netlify
   - Google Cloud Platform
   - Travis CI
-note: Heroku is changing their plan structure soon, and removing the free tier, so the practice projects below may not work anymore
+note: Heroku is changing their plan structure soon, and removing the free tier, so the practice projects above may not work anymore
 ---
