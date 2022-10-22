@@ -2,18 +2,20 @@
 
 Resume project hosted at https://erinkelsey.io
 
+## Setup
+
 ## Run
 
-    Navigate into your new site’s directory and start it up.
+        gatsby develop
 
-    ```shell
-    gatsby develop
-    ```
-
-    Your site is now running at http://localhost:8000!
+    Location: http://localhost:8000
 
 ## Build
 
-    ```shell
-    gatsby build
-    ```
+        gatsby build
+
+## Deploy
+
+    Locally:
+
+            gatsby server
