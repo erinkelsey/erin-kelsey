@@ -37,6 +37,21 @@ const StyledHeroSection = styled.section`
     // margin: 30px 0 0;
     max-width: 1000px;
   }
+
+  .hero-text {
+    padding: 15px;
+    border-radius: var(--border-radius);
+
+    &:hover,
+    &:focus {
+      transition: var(--transition);
+      box-shadow: 0px 0px 70px 10px var(--pink);
+
+      @media (max-width: 768px) {
+        box-shadow: 0px 0px 30px 10px var(--pink);
+      }
+    }
+  }
 `
 
 const Hero = () => {
@@ -83,21 +98,25 @@ const Hero = () => {
           ))}
         </>
       ) : (
-        <TransitionGroup component={null}>
-          {isMounted &&
-            items.map((item, i) => (
-              <CSSTransition key={i} classNames='fadeup' timeout={loaderDelay}>
-                <div
-                  style={{ transitionDelay: `${i + 1}00ms` }}
-                  onMouseEnter={() => setIsEnglish(false)}
-                  onMouseLeave={() => setIsEnglish(true)}
-                  role='presentation'
+        <div
+          className='hero-text'
+          onMouseEnter={() => setIsEnglish(false)}
+          onMouseLeave={() => setIsEnglish(true)}
+          role='presentation'
+        >
+          <TransitionGroup component={null}>
+            {isMounted &&
+              items.map((item, i) => (
+                <CSSTransition
+                  key={i}
+                  classNames='fadeup'
+                  timeout={loaderDelay}
                 >
-                  {item}
-                </div>
-              </CSSTransition>
-            ))}
-        </TransitionGroup>
+                  <div style={{ transitionDelay: `${i + 1}00ms` }}>{item}</div>
+                </CSSTransition>
+              ))}
+          </TransitionGroup>
+        </div>
       )}
     </StyledHeroSection>
   )

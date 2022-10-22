@@ -80,6 +80,10 @@ const StyledRelated = styled.div`
   display: grid;
   grid-template-columns: repeat(5, 2fr);
   grid-gap: 10px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(3, 2fr);
+  }
 `
 
 const SkillModal = ({ name, isOpen, toggle }) => {
@@ -186,7 +190,10 @@ const SkillModal = ({ name, isOpen, toggle }) => {
             <StyledRelated>
               {related.map((technology, i) => {
                 return (
-                  <SkillIcon key={`${technology}-${i}`} name={technology} />
+                  <SkillIcon
+                    key={`${technology}-related-icon-${i}`}
+                    name={technology}
+                  />
                 )
               })}
             </StyledRelated>

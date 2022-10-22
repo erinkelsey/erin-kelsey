@@ -42,7 +42,12 @@ const SkillIcon = ({ name }) => {
         <p>{name}</p>
       </StyledIconButton>
 
-      <SkillModal isOpen={showModal} name={name} toggle={toggleModal} />
+      <SkillModal
+        key={`${name}`}
+        isOpen={showModal}
+        name={name}
+        toggle={toggleModal}
+      />
     </>
   )
 }
