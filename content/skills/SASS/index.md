@@ -1,19 +1,19 @@
 ---
-name: 'Bootstrap'
-usage: 'LOW'
+name: 'SASS'
+usage: 'MEDIUM'
 used:
   - Styling websites, landing pages and web applications
 featured:
-  - StreamTECH
+  - Tortuga Studios
 practice:
   - name: 'all'
     projects:
-      - https://github.com/erinkelsey/blog-app-django-fullstack
+      - https://github.com/erinkelsey/crwn-clothing-react
       - https://github.com/erinkelsey/web-frontend-basics
 related:
   - CSS
-  - SASS
   - Bulma
+  - Bootstrap
   - Styled Components
   - MaterialUI
   - Tachyons

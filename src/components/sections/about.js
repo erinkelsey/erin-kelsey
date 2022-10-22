@@ -116,7 +116,8 @@ const About = () => {
             As a lifelong learner, I am always diving into new technologies and
             frameworks, or picking up new skills, hobbies and interests, as I
             navigate the globe. Recently, I have been learning data science and
-            engineering, ui/ux design, Typescript, WordPress, Spanish and golf!
+            engineering, ui/ux and graphic design, Typescript, WordPress,
+            Spanish and golf!
           </p>
         </div>
 

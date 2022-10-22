@@ -1,10 +1,10 @@
 ---
-name: 'PostreSQL'
+name: 'PostgreSQL'
 usage: 'HIGH'
 used:
   - Create SQL queries, in order to have a clearer view of the data within databases
   - Create scripts to analyze data in databases
-  - Perform fixes on the data in databases, in order to fix issues clients experienced, while working for Streamline Technology
+  - Perform fixes on the data in databases, in order to fix issues clients experienced while working for Streamline Technology
   - Utilize Django ORM for database operations in Django applications
 featured:
   - Emjinx

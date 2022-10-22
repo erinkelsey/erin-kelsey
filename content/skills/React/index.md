@@ -23,8 +23,7 @@ practice:
       - https://github.com/erinkelsey/gatsby-garb
 related:
   - JavaScript
-  - React Hooks
-  - react-router
+  - GatsbyJS
   - Redux
   - npm
   - Apollo

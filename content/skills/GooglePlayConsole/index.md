@@ -7,5 +7,7 @@ featured:
   - MemCards
   - StreamTECH
 related:
+  - Flutter
+  - Java
   - App Store Connect
 ---

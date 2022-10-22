@@ -14,4 +14,9 @@ practice:
       - https://github.com/erinkelsey/fibonacci-calculator-docker
       - https://github.com/erinkelsey/createreactapp-docker
       - https://github.com/erinkelsey/docker-basics
+related:
+  - AWS
+  - Heroku
+  - Firebase
+  - Travis CI
 ---

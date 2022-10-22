@@ -2,7 +2,7 @@
 name: 'Apollo'
 usage: 'LOW'
 used:
-  - Connecting to GraphQL APIs with React
+  - Connecting to GraphQL APIs in React applications
 featured:
   - Emjinx
 practice:

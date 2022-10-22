@@ -34,6 +34,7 @@ practice:
 related:
   - Firebase
   - Heroku
-  - CodeMagic
+  - Docker
   - Travis CI
+  - Google Cloud Platform
 ---

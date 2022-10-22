@@ -6,6 +6,7 @@ used:
 featured:
   - Emjinx
   - MemCards
+  - Resume
   - Tortuga Studios
   - StreamTECH
 related:

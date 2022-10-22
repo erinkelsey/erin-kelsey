@@ -115,7 +115,7 @@ const Icon = ({ name }) => {
       return <IconClose />
     case 'CodeMagic':
       return <IconCodeMagic />
-    case 'C #':
+    case 'C#':
       return <IconCSharp />
     case 'CSS':
       return <IconCSS />
@@ -147,7 +147,7 @@ const Icon = ({ name }) => {
       return <IconFlutter />
     case 'GatsbyJS':
       return <IconGatsbyJS />
-    case 'GCP':
+    case 'Google Cloud Platform':
       return <IconGCP />
     case 'GitHub':
       return <IconGitHub />
@@ -181,7 +181,7 @@ const Icon = ({ name }) => {
       return <IconLink />
     case 'Logo':
       return <IconLogo />
-    case 'MaterialUI':
+    case 'Material UI':
       return <IconMaterialUI />
     case 'Microsoft SQL Server':
       return <IconSQLServer />

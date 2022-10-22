@@ -7,5 +7,7 @@ featured:
   - MemCards
   - StreamTECH
 related:
+  - Flutter
+  - Swift
   - Google Play Console
 ---

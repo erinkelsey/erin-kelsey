@@ -52,7 +52,8 @@ practice:
 related:
   - React
   - NodeJS
-  - npm
   - GatsbyJS
   - DenoJS
+  - TypeScript
+  - npm
 ---

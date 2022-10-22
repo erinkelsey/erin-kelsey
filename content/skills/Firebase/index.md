@@ -23,5 +23,4 @@ related:
   - Heroku
   - CodeMagic
   - Travis CI
-  - TeamCity
 ---

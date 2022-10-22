@@ -21,4 +21,5 @@ related:
   - REST
   - GraphQL
   - Celery
+  - Flask
 ---
