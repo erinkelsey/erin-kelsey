@@ -18,4 +18,10 @@ practice:
       - https://github.com/erinkelsey/crwn-clothing-react
       - https://github.com/erinkelsey/burgerbuilder-react
       - https://github.com/erinkelsey/burgerbuilder-react-hooks
+related:
+  - AWS
+  - Heroku
+  - CodeMagic
+  - Travis CI
+  - TeamCity
 ---

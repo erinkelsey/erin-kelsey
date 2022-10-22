@@ -8,10 +8,11 @@ featured:
   - StreamTECH
 related:
   - Flutter
-  - iOS
-  - Android
   - App Store Connect
   - Google Play Console
   - AWS
   - GitHub
+  - Firebase
+  - Heroku
+  - Travis CI
 ---

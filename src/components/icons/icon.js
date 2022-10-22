@@ -183,6 +183,8 @@ const Icon = ({ name }) => {
       return <IconLogo />
     case 'MaterialUI':
       return <IconMaterialUI />
+    case 'Microsoft SQL Server':
+      return <IconSQLServer />
     case 'MobileIron':
       return <IconMobileIron />
     case 'MongoDB':
@@ -225,8 +227,8 @@ const Icon = ({ name }) => {
       return <IconSASS />
     case 'SQL':
       return <IconSQL />
-    case 'SQLServer':
-      return <IconSQLServer />
+    case 'SQL Developer':
+      return <IconSQL />
     case 'Stripe':
       return <IconStripe />
     case 'StyledComponents':

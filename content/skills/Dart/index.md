@@ -19,11 +19,9 @@ practice:
       - https://github.com/erinkelsey/personalexpenses-flutter
       - https://github.com/erinkelsey/quizapp-flutter
 related:
-  - Dart
+  - Flutter
   - Firebase
   - CodeMagic
-  - iOS
-  - Android
   - App Store Connect
   - Google Play Console
 ---

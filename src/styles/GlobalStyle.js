@@ -399,7 +399,8 @@ const GlobalStyle = createGlobalStyle`
 
     @media (max-width: 768px) {
       max-width: 100%;
-      margin: 10% 0 0 0;
+      margin: 20% 0 0 0;
+      min-height: 90%;
     }
 
     @media (max-width: 480px) {

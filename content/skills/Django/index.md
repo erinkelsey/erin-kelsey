@@ -2,10 +2,10 @@
 name: 'Django'
 usage: 'HIGH'
 used:
-  - Fullstack web applications with Django and Django templates
+  - Fullstack web applications with templates
   - REST APIs with Django REST Framework
   - GraphQL APIs with Graphene and Graphene-Django
-  - Task queues and scheduled tasks with Django, Celery and Celery Beat
+  - Task queues and scheduled tasks with Celery and Celery Beat
 featured:
   - Emjinx
   - StreamTECH
@@ -18,7 +18,7 @@ practice:
       - https://github.com/erinkelsey/reacttracks-django-graphql
 related:
   - Python
-  - Django REST Framework
-  - Graphene
+  - REST
+  - GraphQL
   - Celery
 ---

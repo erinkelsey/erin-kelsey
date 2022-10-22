@@ -32,8 +32,8 @@ practice:
       - https://github.com/erinkelsey/microfrontend-saas-landingpage-react-vue
       - https://github.com/erinkelsey/profiles-rest-api
 related:
-  - Python
-  - Django REST Framework
-  - Graphene
-  - Celery
+  - Firebase
+  - Heroku
+  - CodeMagic
+  - Travis CI
 ---

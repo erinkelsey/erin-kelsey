@@ -22,8 +22,6 @@ related:
   - Dart
   - Firebase
   - CodeMagic
-  - iOS
-  - Android
   - App Store Connect
   - Google Play Console
 ---

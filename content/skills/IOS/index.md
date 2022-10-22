@@ -1,4 +1,0 @@
----
-name: 'iOS'
-usage: 'MEDIUM'
----

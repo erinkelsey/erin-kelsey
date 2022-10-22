@@ -28,7 +28,6 @@ related:
   - Apollo
   - Flutter
   - Django
-  - Graphene
   - NodeJS
   - Insomnia
 ---

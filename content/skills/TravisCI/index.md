@@ -15,4 +15,7 @@ practice:
 related:
   - AWS
   - GitHub
+  - Firebase
+  - Heroku
+  - CodeMagic
 ---
