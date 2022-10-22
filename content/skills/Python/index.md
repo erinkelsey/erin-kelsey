@@ -24,11 +24,8 @@ practice:
       - https://github.com/erinkelsey/datascience-basics
 related:
   - Django
-  - Data Science & Engineering
-  - Django REST Framework
-  - Graphene
-  - SQLAlchemy
+  - Flask
+  - Data Science
   - Celery
-  - Jinja
   - Jupyter
 ---

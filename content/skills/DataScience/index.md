@@ -1,34 +1,19 @@
 ---
-name: 'Data Science & Engineering'
+name: 'Data Science'
 usage: 'LOW'
 used:
-  - Fullstack web applications with Django and Django templates, or Flask with the Jinja template engine
-  - REST APIs with Django REST Framework
-  - GraphQL APIs with Graphene and Graphene-Django
-  - Task queues and scheduled tasks with Django, Celery and Celery Beat
-  - Data science and machine learning projects with pandas, numpy, matplotlib, scikit-learn, Jupyter notebooks and more
-featured:
-  - Emjinx
-  - StreamTECH
+  - Data exploration and visualizations with SQL, Tableau and Python with matplotlib and seaborn
+  - Data science and machine learning projects with pandas, numpy, scikit-learn, Jupyter notebooks and more
+  - Data engineering ETL pipelines with SQLAlchemy, data modeling with relational databases and more
 practice:
-  - name: 'Django'
-    projects:
-      - https://github.com/erinkelsey/star-social-django-fullstack
-      - https://github.com/erinkelsey/blog-app-django-fullstack
-  - name: 'Flask'
-    projects:
-      - https://github.com/erinkelsey/gambling-flask-saas
-  - name: 'Data Science'
+  - name: 'all'
     projects:
       - https://github.com/erinkelsey/datascience-python
       - https://github.com/erinkelsey/datascience-basics
+      - https://github.com/erinkelsey/datascience-tableau
 related:
-  - Django
-  - Data Science & Engineering
-  - Django REST Framework
-  - Graphene
-  - SQLAlchemy
-  - Celery
-  - Jinja
+  - Python
+  - SQL
   - Jupyter
+  - Tableau
 ---

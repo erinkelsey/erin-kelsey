@@ -18,6 +18,7 @@ import {
   IconCSS,
   IconDart,
   IconDataCamp,
+  IconDataScience,
   IconDenoJS,
   IconDjango,
   IconDocker,
@@ -53,9 +54,7 @@ import {
   IconNetlify,
   IconNodeJS,
   IconNPM,
-  IconNumpy,
   IconOracle,
-  IconPandas,
   IconPhotoshop,
   IconPlayStore,
   IconPostgreSQL,
@@ -124,6 +123,8 @@ const Icon = ({ name }) => {
       return <IconDart />
     case 'DataCamp':
       return <IconDataCamp />
+    case 'Data Science':
+      return <IconDataScience />
     case 'DenoJS':
       return <IconDenoJS />
     case 'Django':
@@ -196,12 +197,8 @@ const Icon = ({ name }) => {
       return <IconNPM />
     case 'SharePoint':
       return <IconSharePoint />
-    case 'Numpy':
-      return <IconNumpy />
     case 'Oracle':
       return <IconOracle />
-    case 'Pandas':
-      return <IconPandas />
     case 'Photoshop':
       return <IconPhotoshop />
     case 'Google Play Console':

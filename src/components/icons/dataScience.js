@@ -1,6 +1,6 @@
 import React from 'react'
 
-const IconPandas = () => (
+const IconDataScience = () => (
   <svg
     width='24px'
     height='24px'
@@ -13,4 +13,4 @@ const IconPandas = () => (
   </svg>
 )
 
-export default IconPandas
+export default IconDataScience
