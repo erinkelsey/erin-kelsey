@@ -8,7 +8,7 @@ Resume project hosted at https://erinkelsey.io
 
         gatsby develop
 
-    Location: http://localhost:8000
+Location: http://localhost:8000
 
 ## Build
 
@@ -16,6 +16,6 @@ Resume project hosted at https://erinkelsey.io
 
 ## Deploy
 
-    Locally:
+Locally:
 
-            gatsby server
+        gatsby server
