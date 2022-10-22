@@ -6,16 +6,16 @@ Resume project hosted at https://erinkelsey.io
 
 ## Run
 
-        gatsby develop
+        $ gatsby develop
 
 Location: http://localhost:8000
 
 ## Build
 
-        gatsby build
+        $ gatsby build
 
 ## Deploy
 
 Locally:
 
-        gatsby server
+        $ gatsby server
