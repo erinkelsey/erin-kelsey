@@ -7,8 +7,8 @@ const StyledUsage = styled.div`
     props.usage === 'HIGH'
       ? 'var(--pink)'
       : props.usage === 'MEDIUM'
-      ? 'var(--dark-slate)'
-      : 'var(--light-slate)'};
+      ? 'var(--light-slate)'
+      : 'var(--dark-slate)'};
   color: var(--purple);
   font-size: var(--fz-xxxs);
   font-weight: 600;

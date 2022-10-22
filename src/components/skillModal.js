@@ -12,15 +12,6 @@ const modalStyles = {
     backgroundColor: 'rgba(0, 0, 0, 0.58)',
     zIndex: '9999',
   },
-  content: {
-    position: 'relative',
-    top: 'auto',
-    left: 'auto',
-    right: 'auto',
-    bottom: 'auto',
-    border: 0,
-    backgroundColor: 'var(--purple)',
-  },
 }
 
 const StyledModalHeader = styled.div`

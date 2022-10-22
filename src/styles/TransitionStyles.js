@@ -49,8 +49,8 @@ const TransitionStyles = css`
   .ReactModal__Overlay {
     overflow: auto;
     opacity: 0;
-    transform: translateY(10%);
-    transition: opacity 300ms var(--easing), transform 300ms var(--easing);
+    transform: translateY(30%);
+    transition: opacity 500ms var(--easing), transform 300ms var(--easing);
   }
   .ReactModal__Overlay--after-open {
     opacity: 1;
