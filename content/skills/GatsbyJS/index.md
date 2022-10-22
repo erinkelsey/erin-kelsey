@@ -8,6 +8,7 @@ featured:
 practice:
   - name: 'all'
     projects:
+      - https://github.com/erinkelsey/erin-kelsey
       - https://github.com/erinkelsey/gatsby-garb
 related:
   - JavaScript

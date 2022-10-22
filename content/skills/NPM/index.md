@@ -26,5 +26,5 @@ related:
   - React
   - GatsbyJS
   - NodeJS
-  - Typescript
+  - TypeScript
 ---

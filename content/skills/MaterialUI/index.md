@@ -2,7 +2,7 @@
 name: 'Material UI'
 usage: 'LOW'
 used:
-  - Styling React and GatsbyJS applications
+  - Styling and components for React and GatsbyJS applications
 related:
   - CSS
   - SASS
@@ -10,4 +10,6 @@ related:
   - Bootstrap
   - Styled Components
   - Tachyons
+  - React
+  - GatsbyJS
 ---

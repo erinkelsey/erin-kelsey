@@ -32,6 +32,7 @@ technologies:
   - JavaScript
   - Bootstrap
   - CSS
+  - VSCode
 ---
 
 - Design, develop, test, debug, deploy, maintain, and document all aspects of the development stack

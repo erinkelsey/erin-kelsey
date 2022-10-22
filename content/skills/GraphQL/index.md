@@ -27,8 +27,8 @@ practice:
       - https://github.com/erinkelsey/social-network-graphql-nodejs
 related:
   - React
-  - GatsbJS
   - Apollo
+  - GatsbyJS
   - Flutter
   - Django
   - NodeJS

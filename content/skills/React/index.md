@@ -27,5 +27,4 @@ related:
   - Redux
   - npm
   - Apollo
-  - Jest
 ---

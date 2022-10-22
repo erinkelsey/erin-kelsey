@@ -15,6 +15,6 @@ related:
   - SASS
   - Bulma
   - Styled Components
-  - MaterialUI
+  - Material UI
   - Tachyons
 ---

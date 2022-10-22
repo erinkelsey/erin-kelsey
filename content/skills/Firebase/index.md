@@ -21,6 +21,7 @@ practice:
 related:
   - AWS
   - Heroku
-  - CodeMagic
   - Travis CI
+  - Netlify
+  - Google Cloud Platform
 ---

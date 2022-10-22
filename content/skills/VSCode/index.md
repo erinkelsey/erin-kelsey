@@ -8,4 +8,8 @@ featured:
   - Emjinx
   - Tortuga Studios
   - StreamTECH
+related:
+  - XCode
+  - Android Studio
+  - Visual Studio
 ---

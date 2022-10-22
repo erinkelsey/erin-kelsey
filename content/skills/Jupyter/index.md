@@ -9,4 +9,5 @@ practice:
       - https://github.com/erinkelsey/datascience-python
 related:
   - Python
+  - Data Science
 ---

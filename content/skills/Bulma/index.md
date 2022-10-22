@@ -10,6 +10,6 @@ related:
   - SASS
   - Bootstrap
   - Styled Components
-  - MaterialUI
+  - Material UI
   - Tachyons
 ---

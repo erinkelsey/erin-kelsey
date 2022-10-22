@@ -39,6 +39,7 @@ import {
   IconInsomnia,
   IconInstagram,
   IconIOS,
+  IconJava,
   IconJavaScript,
   IconJest,
   IconJinja,
@@ -67,6 +68,7 @@ import {
   IconRedux,
   IconREST,
   IconSASS,
+  IconScrum,
   IconSharePoint,
   IconSQL,
   IconSQLServer,
@@ -75,6 +77,7 @@ import {
   IconSwift,
   IconTableau,
   IconTachyons,
+  IconTeamCity,
   IconTerminal,
   IconTravisCI,
   IconTypeScript,
@@ -133,8 +136,6 @@ const Icon = ({ name }) => {
       return <IconDocker />
     case 'Eclipse':
       return <IconEclipse />
-    case 'Exchange':
-      return <IconExchange />
     case 'Express':
       return <IconExpress />
     case 'Figma':
@@ -165,6 +166,8 @@ const Icon = ({ name }) => {
       return <IconInstagram />
     case 'iOS':
       return <IconIOS />
+    case 'Java':
+      return <IconJava />
     case 'JavaScript':
       return <IconJavaScript />
     case 'Jest':
@@ -183,8 +186,14 @@ const Icon = ({ name }) => {
       return <IconLogo />
     case 'Material UI':
       return <IconMaterialUI />
+    case 'Microsoft Exchange':
+      return <IconExchange />
+    case 'Microsoft SharePoint':
+      return <IconSharePoint />
     case 'Microsoft SQL Server':
       return <IconSQLServer />
+    case 'Microsoft Windows Server':
+      return <IconWindows />
     case 'MobileIron':
       return <IconMobileIron />
     case 'MongoDB':
@@ -197,8 +206,6 @@ const Icon = ({ name }) => {
       return <IconNodeJS />
     case 'npm':
       return <IconNPM />
-    case 'SharePoint':
-      return <IconSharePoint />
     case 'Oracle':
       return <IconOracle />
     case 'Photoshop':
@@ -225,13 +232,15 @@ const Icon = ({ name }) => {
       return <IconREST />
     case 'SASS':
       return <IconSASS />
+    case 'Scrum':
+      return <IconScrum />
     case 'SQL':
       return <IconSQL />
     case 'SQL Developer':
       return <IconSQL />
     case 'Stripe':
       return <IconStripe />
-    case 'StyledComponents':
+    case 'Styled Components':
       return <IconStyledComponents />
     case 'Swift':
       return <IconSwift />
@@ -239,6 +248,8 @@ const Icon = ({ name }) => {
       return <IconTableau />
     case 'Tachyons':
       return <IconTachyons />
+    case 'TeamCity':
+      return <IconTeamCity />
     case 'Terminal':
       return <IconTerminal />
     case 'Travis CI':
@@ -251,8 +262,7 @@ const Icon = ({ name }) => {
       return <IconVisualStudio />
     case 'VSCode':
       return <IconVSCode />
-    case 'Windows':
-      return <IconWindows />
+
     case 'WordPress':
       return <IconWordPress />
     case 'XCode':

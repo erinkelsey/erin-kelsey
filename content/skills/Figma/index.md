@@ -13,4 +13,5 @@ practice:
       - Add links to Figma files
 related:
   - XD
+  - GitHub
 ---

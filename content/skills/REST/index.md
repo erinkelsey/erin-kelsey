@@ -30,7 +30,6 @@ related:
   - React
   - Flutter
   - Django
-  - Django REST Framework
   - NodeJS
   - Postman
 ---

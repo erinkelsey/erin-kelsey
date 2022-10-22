@@ -13,6 +13,4 @@ related:
   - SQL
   - PostgreSQL
   - Oracle
-  - Microsoft SQL Server
-  - SQL Developer
 ---

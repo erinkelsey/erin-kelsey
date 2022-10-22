@@ -10,7 +10,7 @@ related:
   - SASS
   - Bulma
   - Bootstrap
-  - MaterialUI
+  - Material UI
   - Tachyons
   - React
   - GatsbyJS

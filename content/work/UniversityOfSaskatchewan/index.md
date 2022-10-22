@@ -8,6 +8,11 @@ range: '2012 - 2013'
 url: 'https://www.usask.ca'
 technologies:
   - Python
+  - Django
+  - PostgreSQL
+  - HTML
+  - CSS
+  - JavaScript
 ---
 
 - Extend the functionality of an existing Django web application, consisting of an online toolset for retrieving, collating and saving versions of textual documents to a database

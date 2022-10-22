@@ -7,7 +7,13 @@ location: 'Regina, Canada'
 range: '2014 - 2015'
 url: 'http://saskcancer.ca'
 technologies:
-  - Python
+  - Citrix
+  - Active Directory
+  - Microsoft Windows Server
+  - Microsoft SQL Server
+  - Microsoft Exchange
+  - Microsoft SharePoint
+  - MobileIron
 ---
 
 - Provide technical support, in a healthcare setting, for computer systems, network users, and numerous software applications

@@ -8,8 +8,7 @@ used:
   - Create and modify existing data extracts in PL/SQL, that were set up to run as overnight batch jobs, while working for Celero Solutions
 related:
   - SQL
+  - SQL Developer
   - PostgreSQL
   - MySQL
-  - Microsoft SQL Server
-  - SQL Developer
 ---

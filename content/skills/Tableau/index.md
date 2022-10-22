@@ -7,4 +7,7 @@ practice:
   - name: 'all'
     projects:
       - https://github.com/erinkelsey/datascience-tableau
+related:
+  - Data Science
+  - Jupyter
 ---

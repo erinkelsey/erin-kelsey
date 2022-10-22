@@ -95,6 +95,8 @@ const SkillModal = ({ name, isOpen, toggle }) => {
                 projects
               }
               related
+              certification
+              note
             }
           }
         }
@@ -102,9 +104,9 @@ const SkillModal = ({ name, isOpen, toggle }) => {
     }
   `)
 
-  const { usage, used, featured, practice, related } = data.skills.edges.find(
-    (el) => el.node.frontmatter.name === name
-  ).node.frontmatter
+  const { usage, used, featured, practice, related, certification, note } =
+    data.skills.edges.find((el) => el.node.frontmatter.name === name).node
+      .frontmatter
 
   return (
     <Modal
@@ -188,6 +190,22 @@ const SkillModal = ({ name, isOpen, toggle }) => {
                 )
               })}
             </StyledRelated>
+          </>
+        )}
+
+        {certification && (
+          <>
+            <h4 className='modal-section-header'>Certification</h4>
+            <a href={certification} target='_blank' rel='noopener noreferrer'>
+              {certification}
+            </a>
+          </>
+        )}
+
+        {note && (
+          <>
+            <h4 className='modal-section-header'>Note</h4>
+            <p>{note}</p>
           </>
         )}
       </StyledModalBody>

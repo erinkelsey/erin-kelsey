@@ -7,7 +7,15 @@ location: 'Remote'
 range: '2015 - 2017'
 url: 'https://celero.ca'
 technologies:
-  - Python
+  - SQL
+  - Oracle
+  - Powershell
+  - C#
+  - SQL Developer
+  - Visual Studio
+  - Scrum
+  - TeamCity
+  - REST
 ---
 
 - Support the banking platform used by the company’s clients (Fiserv DNA), by resolving production issues, implementing upgrades, and performing maintenance and testing
