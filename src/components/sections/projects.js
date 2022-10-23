@@ -349,12 +349,10 @@ const Projects = () => {
 
   return (
     <section id='projects'>
-      <>
-        <h2 className='section-heading' ref={revealTitle}>
-          Projects
-        </h2>
+      <div ref={revealTitle}>
+        <h2 className='section-heading'>Projects</h2>
         <hr className='section-heading-underline' />
-      </>
+      </div>
 
       <StyledProjectsGrid>
         {featuredProjects &&
