@@ -7,7 +7,7 @@ import { usePrefersReducedMotion } from '@hooks'
 const StyledPhilosophySection = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
   flex-direction: column;
-  margin: 0;
+  margin: auto;
   height: 80vh;
 
   h2 {
@@ -37,8 +37,8 @@ const Philosophy = () => {
       <h2 className='section-heading'>Philosophy</h2>
       <hr className='section-heading-underline section-heading-center' />
       <p>
-        There isn’t a problem I can’t solve, or a challenge I can’t overcome,
-        whether in front of a computer, or in life.
+        There isn't a problem I can't solve, or a challenge I can't overcome,
+        whether in life, or in front of a computer.
       </p>
     </StyledPhilosophySection>
   )

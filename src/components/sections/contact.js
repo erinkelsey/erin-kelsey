@@ -8,8 +8,10 @@ import { usePrefersReducedMotion } from '@hooks'
 const StyledContactSection = styled.section`
   ${({ theme }) => theme.mixins.flexCenter};
   flex-direction: column;
-  margin: 0;
-  height: 80vh;
+  margin: auto;
+  min-height: 90vh;
+  max-height: 1000px;
+  width: 100%;
 
   h2 {
     text-align: center;
