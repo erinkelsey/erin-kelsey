@@ -2,7 +2,7 @@
 name: 'Travis CI'
 usage: 'HIGH'
 used:
-  - Deploying various types of applications to AWS services, via GitHub repository, including multi-container or single container Docker applications, static web pages, and fullstack web applications
+  - Deploying various types of applications to AWS or Heroku, via GitHub repository, including multi-container or single container Docker applications, static web pages, and fullstack web applications
 featured:
   - Emjinx
   - StreamTECH
@@ -15,7 +15,7 @@ practice:
 related:
   - AWS
   - GitHub
-  - Firebase
   - Heroku
+  - Firebase
   - CodeMagic
 ---

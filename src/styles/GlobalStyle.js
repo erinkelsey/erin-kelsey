@@ -206,6 +206,7 @@ const GlobalStyle = createGlobalStyle`
     border-top: 3px solid var(--pink);
     border-radius: 5px;
     margin: 10px 30px 30px 30px;
+    transition: var(--transition);
   }
 
   img,
