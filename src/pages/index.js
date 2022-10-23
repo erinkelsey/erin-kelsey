@@ -11,6 +11,7 @@ import {
   Work,
   Projects,
   Philosophy,
+  Contact,
 } from '@components'
 
 Modal.setAppElement(`#___gatsby`)
@@ -28,6 +29,7 @@ const IndexPage = ({ location }) => {
         <Work />
         <Philosophy />
         <Projects />
+        <Contact />
       </StyledMainContainer>
     </Layout>
   )
