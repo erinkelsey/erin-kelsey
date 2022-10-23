@@ -3,7 +3,15 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import Modal from 'react-modal'
 
-import { Layout, Seo, Hero, About, Work, Projects } from '@components'
+import {
+  Layout,
+  Seo,
+  Hero,
+  About,
+  Work,
+  Projects,
+  Philosophy,
+} from '@components'
 
 Modal.setAppElement(`#___gatsby`)
 
@@ -18,6 +26,7 @@ const IndexPage = ({ location }) => {
         <Hero />
         <About />
         <Work />
+        <Philosophy />
         <Projects />
       </StyledMainContainer>
     </Layout>

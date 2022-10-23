@@ -182,9 +182,9 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .section-heading {
-    display: flex;
-    align-items: center;
-    position: relative;
+    // display: flex;
+    // align-items: center;
+    // position: relative;
     margin: 10px 0 0;
     width: 100%;
     font-size: clamp(var(--fz-heading-sm), 3vw, var(--fz-heading-xxl));
@@ -206,6 +206,14 @@ const GlobalStyle = createGlobalStyle`
     border-top: 3px solid var(--pink);
     border-radius: 5px;
     margin: 10px 30px 30px 30px;
+  }
+
+  .section-heading-center {
+    width: 350px;
+
+    @media (max-width: 768px) {
+      width: 250px;
+    }
   }
 
   img,
