@@ -36,10 +36,7 @@ const Philosophy = () => {
     <StyledPhilosophySection id='philosophy' ref={revealContainer}>
       <h2 className='section-heading'>Philosophy</h2>
       <hr className='section-heading-underline section-heading-center' />
-      <p>
-        There isn't a problem I can't solve, or a challenge I can't overcome,
-        whether in life, or in front of a computer.
-      </p>
+      <p>There are no failures — just results to learn from.</p>
     </StyledPhilosophySection>
   )
 }

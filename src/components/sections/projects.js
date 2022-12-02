@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 // import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
+import { SkillIcon } from '@components'
 import sr from '@utils/sr'
 import { srConfig } from '@config'
 import { usePrefersReducedMotion } from '@hooks'
@@ -295,6 +296,22 @@ const StyledProject = styled.li`
       }
     }
   }
+
+  .reverse {
+    direction: rtl;
+  }
+`
+
+const StyledTechnologies = styled.div`
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  grid-gap: 10px;
+  grid-column-start: -1;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(3, 2fr);
+  }
 `
 
 const Projects = () => {
@@ -382,12 +399,17 @@ const Projects = () => {
                       dangerouslySetInnerHTML={{ __html: html }}
                     />
 
-                    {technologies.length && (
-                      <ul className='project-technologies-list'>
-                        {technologies.map((technology, i) => (
-                          <li key={i}>{technology}</li>
+                    {technologies && technologies.length && (
+                      <StyledTechnologies
+                        className={i % 2 === 0 ? 'reverse' : ''}
+                      >
+                        {technologies.map((technology) => (
+                          <SkillIcon
+                            key={`${i}-${technology}`}
+                            name={technology}
+                          />
                         ))}
-                      </ul>
+                      </StyledTechnologies>
                     )}
                   </div>
                 </div>

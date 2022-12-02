@@ -37,26 +37,10 @@ const StyledHeroSection = styled.section`
     // margin: 30px 0 0;
     max-width: 1000px;
   }
-
-  .hero-text {
-    padding: 15px;
-    border-radius: var(--border-radius);
-
-    &:hover,
-    &:focus {
-      transition: var(--transition);
-      box-shadow: 0px 0px 70px 10px var(--pink);
-
-      @media (max-width: 768px) {
-        box-shadow: 0px 0px 30px 10px var(--pink);
-      }
-    }
-  }
 `
 
 const Hero = () => {
   const [isMounted, setIsMounted] = useState(false)
-  const [isEnglish, setIsEnglish] = useState(true)
   const prefersReducedMotion = usePrefersReducedMotion()
 
   useEffect(() => {
@@ -68,21 +52,16 @@ const Hero = () => {
     return () => clearTimeout(timeout)
   }, [prefersReducedMotion])
 
-  const one = <h1>{isEnglish ? 'Hi, my name is' : 'Hola, me llamo'}</h1>
+  const one = <h1>Hi, my name is</h1>
   const two = <h2 className='big-heading'>Erin Kelsey</h2>
   const three = (
-    <h3 className='medium-heading'>
-      {isEnglish
-        ? 'Building and creating is what I do.'
-        : 'Construir y crear es lo que hago.'}
-    </h3>
+    <h3 className='medium-heading'>Building and creating is what I do.</h3>
   )
   const four = (
     <>
       <p>
-        {isEnglish
-          ? 'I am a senior software engineer (and beginner ui/ux designer), focused on bringing engaging digital products to life for web and mobile.'
-          : 'Soy ingeniera de software sénior (y diseñadora principiante de ui/ux) y me especializo en la creación de productos digitales para web y móvil.'}
+        I am a senior software engineer (and beginner ui/ux designer), focused
+        on bringing engaging digital products to life for web and mobile.
       </p>
     </>
   )
@@ -98,25 +77,14 @@ const Hero = () => {
           ))}
         </>
       ) : (
-        <div
-          className='hero-text'
-          onMouseEnter={() => setIsEnglish(false)}
-          onMouseLeave={() => setIsEnglish(true)}
-          role='presentation'
-        >
-          <TransitionGroup component={null}>
-            {isMounted &&
-              items.map((item, i) => (
-                <CSSTransition
-                  key={i}
-                  classNames='fadeup'
-                  timeout={loaderDelay}
-                >
-                  <div style={{ transitionDelay: `${i + 1}00ms` }}>{item}</div>
-                </CSSTransition>
-              ))}
-          </TransitionGroup>
-        </div>
+        <TransitionGroup component={null}>
+          {isMounted &&
+            items.map((item, i) => (
+              <CSSTransition key={i} classNames='fadeup' timeout={loaderDelay}>
+                <div style={{ transitionDelay: `${i + 1}00ms` }}>{item}</div>
+              </CSSTransition>
+            ))}
+        </TransitionGroup>
       )}
     </StyledHeroSection>
   )
