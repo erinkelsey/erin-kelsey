@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-// import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
 import { SkillIcon } from '@components'
 import sr from '@utils/sr'
@@ -19,7 +19,7 @@ const StyledProjectsGrid = styled.ul`
 const StyledProject = styled.li`
   position: relative;
   display: grid;
-  grid-gap: 10px;
+  // grid-gap: 10px;
   grid-template-columns: repeat(12, 1fr);
   align-items: center;
 
@@ -56,6 +56,7 @@ const StyledProject = styled.li`
         padding: 25px 25px 20px;
       }
     }
+
     .project-technologies-list {
       justify-content: flex-end;
 
@@ -71,22 +72,39 @@ const StyledProject = styled.li`
         }
       }
     }
-    .project-links {
-      justify-content: flex-end;
-      margin-left: 0;
-      margin-right: -10px;
 
-      @media (max-width: 768px) {
-        justify-content: flex-start;
-        margin-left: -10px;
-        margin-right: 0;
-      }
+    .project-image-left-memcards {
+      grid-column: 1 / 3;
+      width: 125px;
+      align-self: end;
+      z-index: 1;
     }
-    .project-image {
-      grid-column: 1 / 8;
 
-      @media (max-width: 768px) {
-        grid-column: 1 / -1;
+    .project-image-back-memcards {
+      grid-column: 2 / 5;
+    }
+
+    .project-image-right-memcards {
+      grid-column: 4 / 6;
+      justify-self: end;
+      width: 125px;
+      align-self: end;
+      z-index: 1;
+    }
+
+    .project-image-back-streamtech {
+      grid-column: 1 / 6;
+    }
+
+    .project-image-right-streamtech {
+      grid-column: 5 / 7;
+      width: 125px;
+      align-self: end;
+    }
+
+    .project-technologies {
+      @media (min-width: 768px) {
+        direction: rtl;
       }
     }
   }
@@ -181,61 +199,26 @@ const StyledProject = styled.li`
     }
   }
 
-  .project-technologies-list {
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    z-index: 2;
-    margin: 25px 0 10px;
-    padding: 0;
-    list-style: none;
-
-    li {
-      margin: 0 20px 5px 0;
-      color: var(--light-slate);
-      font-family: var(--font-label);
-      font-size: var(--fz-xs);
-      white-space: nowrap;
-    }
-
-    @media (max-width: 768px) {
-      margin: 10px 0;
-
-      li {
-        margin: 0 10px 5px 0;
-        color: var(--lightest-slate);
-      }
-    }
-  }
-
-  .project-links {
-    display: flex;
-    align-items: center;
-    position: relative;
-    margin-top: 10px;
-    margin-left: -10px;
-    color: var(--lightest-slate);
-
-    a {
-      ${({ theme }) => theme.mixins.flexCenter};
-      padding: 10px;
-
-      &.external {
-        svg {
-          width: 22px;
-          height: 22px;
-          margin-top: -4px;
-        }
-      }
-
-      svg {
-        width: 20px;
-        height: 20px;
-      }
-    }
-  }
-
   .project-image {
+    ${({ theme }) => theme.mixins.dropShadow};
+    position: relative;
+    z-index: 0;
+    grid-row: 1 / -1;
+
+    transition: var(--transition);
+
+    &:hover,
+    &:focus {
+      z-index: 5;
+      transform: scale(1.25);
+    }
+
+    .img {
+      border-radius: var(--border-radius);
+    }
+  }
+
+  .project-image-1 {
     ${({ theme }) => theme.mixins.boxShadow};
     grid-column: 6 / -1;
     grid-row: 1 / -1;
@@ -249,15 +232,13 @@ const StyledProject = styled.li`
     }
 
     a {
-      width: 100%;
-      height: 100%;
-      background-color: var(--green);
-      border-radius: var(--border-radius);
+      // width: 100%;
+      // height: 100%;
+      // border-radius: var(--border-radius);
       vertical-align: middle;
 
       &:hover,
       &:focus {
-        background: transparent;
         outline: 0;
 
         &:before,
@@ -270,47 +251,38 @@ const StyledProject = styled.li`
       &:before {
         content: '';
         position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+        // width: 100%;
+        // height: 100%;
+        // top: 0;
+        // left: 0;
+        // right: 0;
+        // bottom: 0;
         z-index: 3;
         transition: var(--transition);
-        background-color: var(--purple);
-        mix-blend-mode: screen;
       }
     }
 
     .img {
       border-radius: var(--border-radius);
-      mix-blend-mode: multiply;
-      filter: grayscale(100%) contrast(1) brightness(90%);
 
       @media (max-width: 768px) {
         object-fit: cover;
         width: auto;
         height: 100%;
-        filter: grayscale(100%) contrast(1) brightness(50%);
       }
     }
   }
 
-  .reverse {
-    direction: rtl;
-  }
-`
+  .project-technologies {
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+    grid-column-start: -1;
 
-const StyledTechnologies = styled.div`
-  padding-top: 20px;
-  display: grid;
-  grid-template-columns: repeat(4, 2fr);
-  grid-gap: 10px;
-  grid-column-start: -1;
-
-  @media (max-width: 768px) {
-    grid-template-columns: repeat(3, 2fr);
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 `
 
@@ -337,6 +309,35 @@ const Projects = () => {
                   )
                 }
               }
+              back {
+                childImageSharp {
+                  gatsbyImageData(
+                    width: 700
+                    placeholder: BLURRED
+                    formats: [AUTO, WEBP, AVIF]
+                  )
+                }
+              }
+              left {
+                childImageSharp {
+                  gatsbyImageData(
+                    width: 700
+                    placeholder: BLURRED
+                    formats: [AUTO, WEBP, AVIF]
+                  )
+                }
+              }
+              right {
+                childImageSharp {
+                  gatsbyImageData(
+                    width: 700
+                    placeholder: BLURRED
+                    formats: [AUTO, WEBP, AVIF]
+                  )
+                }
+              }
+              android
+              ios
               external
               technologies
               software
@@ -375,9 +376,22 @@ const Projects = () => {
         {featuredProjects &&
           featuredProjects.map(({ node }, i) => {
             const { frontmatter, html } = node
-            const { name, external, technologies, software } = frontmatter
-            // const { name, external, technologies, cover } = frontmatter
-            // const image = getImage(cover)
+            const {
+              name,
+              external,
+              android,
+              ios,
+              technologies,
+              software,
+              cover,
+              back,
+              left,
+              right,
+            } = frontmatter
+            const image = getImage(cover)
+            const backImage = getImage(back)
+            const leftImage = getImage(left)
+            const rightImage = getImage(right)
 
             return (
               <StyledProject
@@ -400,25 +414,93 @@ const Projects = () => {
                     />
 
                     {technologies && technologies.length && (
-                      <StyledTechnologies
-                        className={i % 2 === 0 ? 'reverse' : ''}
-                      >
+                      <div className='project-technologies'>
                         {technologies.map((technology) => (
                           <SkillIcon
                             key={`${i}-${technology}`}
                             name={technology}
                           />
                         ))}
-                      </StyledTechnologies>
+                      </div>
                     )}
                   </div>
                 </div>
 
-                {/* <div className='project-image'>
-                  <a href={external ? external : github ? github : '#'}>
-                    <GatsbyImage image={image} alt={title} className='img' />
+                {leftImage && (
+                  <div
+                    className={
+                      name === 'MemCards'
+                        ? 'project-image project-image-left-memcards'
+                        : 'project-image'
+                    }
+                  >
+                    <a
+                      href={
+                        external
+                          ? external
+                          : ios
+                          ? ios
+                          : android
+                          ? android
+                          : '#'
+                      }
+                    >
+                      <GatsbyImage
+                        image={leftImage}
+                        alt={name}
+                        className='img'
+                      />
+                    </a>
+                  </div>
+                )}
+
+                <div
+                  className={
+                    name === 'MemCards'
+                      ? 'project-image project-image-back-memcards'
+                      : name === 'StreamTECH'
+                      ? 'project-image project-image-back-streamtech'
+                      : 'project-image'
+                  }
+                >
+                  <a
+                    href={
+                      external ? external : ios ? ios : android ? android : '#'
+                    }
+                  >
+                    <GatsbyImage image={backImage} alt={name} className='img' />
                   </a>
-                </div> */}
+                </div>
+
+                {rightImage && (
+                  <div
+                    className={
+                      name === 'MemCards'
+                        ? 'project-image project-image-right-memcards'
+                        : name === 'StreamTECH'
+                        ? 'project-image project-image-right-streamtech'
+                        : 'project-image'
+                    }
+                  >
+                    <a
+                      href={
+                        external
+                          ? external
+                          : ios
+                          ? ios
+                          : android
+                          ? android
+                          : '#'
+                      }
+                    >
+                      <GatsbyImage
+                        image={rightImage}
+                        alt={name}
+                        className='img'
+                      />
+                    </a>
+                  </div>
+                )}
               </StyledProject>
             )
           })}

@@ -12,4 +12,4 @@ technologies:
   - Figma
 ---
 
-Earlier this year, I decided that I wanted to get better at graphic design. I took a couple of online courses to learn the basics of Adobe Photoshop, Illustrator and design theory, and have been successful in creating many great custom logos, icons and graphics for my various projects.
+Earlier this year, I decided that I wanted to get better at graphic design, so that I could create more visually appealing websites and mobile apps. I took a couple of online courses to learn the basics of Adobe Photoshop, Illustrator and design theory, and have been successful at creating many great custom logos, icons and graphics for my various projects.

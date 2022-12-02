@@ -143,6 +143,10 @@ const mixins = {
     }
   `,
 
+  dropShadow: css`
+    filter: drop-shadow(0px 4px 10px black);
+  `,
+
   fancyList: css`
     padding: 0;
     margin: 0;

@@ -6,5 +6,5 @@ used:
 related:
   - Microsoft SQL Server
   - Microsoft Exchange
-  - Microsoft Sharepoint
+  - Microsoft SharePoint
 ---

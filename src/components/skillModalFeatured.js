@@ -14,10 +14,11 @@ const StyledFeatured = styled.div`
 
     .gatsby-image-wrapper {
       width: 100px;
+      background-color: white;
+      border-radius: var(--border-radius) 0 0 var(--border-radius);
     }
 
     img {
-      border-radius: var(--border-radius) 0 0 var(--border-radius);
       width: 100px;
     }
 

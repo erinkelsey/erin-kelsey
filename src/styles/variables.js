@@ -8,6 +8,7 @@ const variables = css`
     --lightest-purple: #56357e // --lightest-navy
     --purple-shadow: rgba(20, 0, 45, 0.7); // --navy-shadow
     --purple-shadow-nav: rgba(20, 0, 45, 0.85);
+    --purple-nav-on-scroll: rgba(29, 5, 58, 0.75);
     --dark-slate: #946c90;
     --slate: #bc9cb9;
     --light-slate: #ccc0cb; 

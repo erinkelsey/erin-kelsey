@@ -10,6 +10,8 @@ Resume project hosted at https://erinkelsey.io
 
 Location: http://localhost:8000
 
+GraphiQL: http://localhost:8000/\_\_\_graphql
+
 ## Build
 
         $ gatsby build

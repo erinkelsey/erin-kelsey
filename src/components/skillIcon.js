@@ -9,7 +9,7 @@ const StyledIconButton = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100px;
+  width: 80px;
 
   &:hover,
   &:focus {
