@@ -11,10 +11,10 @@ android: 'https://play.google.com/store/apps/details?id=io.tortugastudios.memcar
 show: true
 software: true
 technologies:
+  - Figma
   - Illustrator
   - CodeMagic
-  - Google Play Console
-  - App Store Connect
+  - Dart
   - Flutter
 ---
 

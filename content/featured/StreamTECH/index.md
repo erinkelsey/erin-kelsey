@@ -12,6 +12,7 @@ show: true
 software: true
 technologies:
   - Flutter
+  - Dart
   - Django
   - Python
 ---
