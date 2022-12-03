@@ -11,7 +11,6 @@ android: 'https://play.google.com/store/apps/details?id=com.streamtechapp.app'
 show: true
 software: true
 technologies:
-  - Dart
   - Flutter
   - Django
   - Python

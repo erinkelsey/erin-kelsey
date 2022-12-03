@@ -96,13 +96,12 @@ const About = () => {
           </p>
 
           <p>
-            I have worked for a variety of different companies, ever since
-            graduating from the University of Saskatchewan, with a B.Sc. Honours
-            in Computer Science. Some of my previous employers include, a
-            leading fintech solutions provider, a small-scale startup, and a
-            large governmental organization. As a result of my varied work
-            experience, my skills, abilities and knowledge are wide-ranging and
-            diverse.
+            I have worked for a variety of companies, ever since graduating from
+            the University of Saskatchewan, with a B.Sc. Honours in Computer
+            Science. Some of my previous employers include, a leading fintech
+            solutions provider, a small-scale startup, and a large governmental
+            organization. As a result of my varied work experience, my skills,
+            abilities and knowledge are wide-ranging and diverse.
           </p>
 
           <p>
@@ -116,8 +115,7 @@ const About = () => {
             As a lifelong learner, I am always diving into new technologies and
             frameworks, or picking up new skills, hobbies and interests, as I
             navigate the globe. Recently, I have been learning data science and
-            engineering, ui/ux and graphic design, Typescript, WordPress,
-            Spanish and golf!
+            engineering, ui/ux and graphic design, Typescript, Spanish and golf!
           </p>
         </div>
 

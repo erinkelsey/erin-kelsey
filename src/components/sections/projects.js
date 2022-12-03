@@ -78,10 +78,21 @@ const StyledProject = styled.li`
       width: 125px;
       align-self: end;
       z-index: 1;
+
+      @media (max-width: 1080px) {
+        grid-column: 3 / 5;
+        width: 75px;
+        align-self: center;
+        padding-top: 150px;
+      }
     }
 
     .project-image-back-memcards {
       grid-column: 2 / 5;
+
+      @media (max-width: 1080px) {
+        grid-column: 1 / 4;
+      }
     }
 
     .project-image-right-memcards {
@@ -90,20 +101,36 @@ const StyledProject = styled.li`
       width: 125px;
       align-self: end;
       z-index: 1;
+
+      @media (max-width: 1080px) {
+        display: none;
+      }
     }
 
     .project-image-back-streamtech {
       grid-column: 1 / 6;
+
+      @media (max-width: 1080px) {
+        grid-column: 2 / 4;
+        width: 300px;
+      }
     }
 
     .project-image-right-streamtech {
       grid-column: 5 / 7;
       width: 125px;
       align-self: end;
+
+      @media (max-width: 1080px) {
+        grid-column: 1 / 3;
+        width: 75px;
+        align-self: center;
+        padding-top: 150px;
+      }
     }
 
     .project-technologies {
-      @media (min-width: 768px) {
+      @media (min-width: 769px) {
         direction: rtl;
       }
     }
@@ -216,6 +243,10 @@ const StyledProject = styled.li`
     .img {
       border-radius: var(--border-radius);
     }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 
   .project-image-1 {
@@ -276,12 +307,18 @@ const StyledProject = styled.li`
   .project-technologies {
     padding-top: 20px;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-gap: 10px;
     grid-column-start: -1;
 
+    @media (max-width: 1080px) {
+      grid-template-columns: repeat(3, 1fr);
+      padding-top: 10px;
+    }
+
     @media (max-width: 768px) {
       grid-template-columns: repeat(3, 1fr);
+      padding-top: 0px;
     }
   }
 `
@@ -434,23 +471,7 @@ const Projects = () => {
                         : 'project-image'
                     }
                   >
-                    <a
-                      href={
-                        external
-                          ? external
-                          : ios
-                          ? ios
-                          : android
-                          ? android
-                          : '#'
-                      }
-                    >
-                      <GatsbyImage
-                        image={leftImage}
-                        alt={name}
-                        className='img'
-                      />
-                    </a>
+                    <GatsbyImage image={leftImage} alt={name} className='img' />
                   </div>
                 )}
 
@@ -463,13 +484,7 @@ const Projects = () => {
                       : 'project-image'
                   }
                 >
-                  <a
-                    href={
-                      external ? external : ios ? ios : android ? android : '#'
-                    }
-                  >
-                    <GatsbyImage image={backImage} alt={name} className='img' />
-                  </a>
+                  <GatsbyImage image={backImage} alt={name} className='img' />
                 </div>
 
                 {rightImage && (
@@ -482,23 +497,11 @@ const Projects = () => {
                         : 'project-image'
                     }
                   >
-                    <a
-                      href={
-                        external
-                          ? external
-                          : ios
-                          ? ios
-                          : android
-                          ? android
-                          : '#'
-                      }
-                    >
-                      <GatsbyImage
-                        image={rightImage}
-                        alt={name}
-                        className='img'
-                      />
-                    </a>
+                    <GatsbyImage
+                      image={rightImage}
+                      alt={name}
+                      className='img'
+                    />
                   </div>
                 )}
               </StyledProject>

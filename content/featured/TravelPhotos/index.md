@@ -4,7 +4,7 @@ name: 'Travel Photos'
 cover: './logo.png'
 logo: './logo.png'
 external: 'https://www.instagram.com/erinkelsey_'
-show: true
+show: false
 software: false
 technologies:
   - Lightroom
