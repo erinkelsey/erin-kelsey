@@ -1,8 +1,8 @@
 ---
 date: '2'
 name: 'Emjinx'
-cover: './logo.jpg'
-logo: './logo.jpg'
+cover: './logo.png'
+logo: './logo.png'
 external: 'https://emjinx.com'
 show: true
 software: true
@@ -12,6 +12,8 @@ technologies:
   - Celery
   - React
   - Apollo
+  - Stripe
+  - GitHub Actions
 ---
 
-An online service that can be used to send an email notification to owners of static websites and landing pages, that someone has contacted them through their site. This service is low-cost and has low overhead, meaning that the implementation is simple and fast, and can be used with any frontend technology. Available now [online](https://emjinx.com).
+An online service for implementing contact forms on static websites and landing pages. This service is a REST and GraphQL API, which can be used to send a notifications to the website's owner when someone has contacted them through their site. Available now as a [Web App](https://emjinx.com).

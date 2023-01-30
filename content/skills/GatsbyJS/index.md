@@ -2,13 +2,13 @@
 name: 'GatsbyJS'
 usage: 'MEDIUM'
 used:
-  - Building websites using the GatsbyJS framework and React. Deploy projects using the Netlify service or Gatsby Cloud
+  - Building websites, and landing pages, using the GatsbyJS framework and React.
 featured:
+  - Emjinx
   - Resume
 practice:
   - name: 'all'
     projects:
-      - https://github.com/erinkelsey/erin-kelsey
       - https://github.com/erinkelsey/gatsby-garb
 related:
   - JavaScript

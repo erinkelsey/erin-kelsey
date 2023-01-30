@@ -1,6 +1,6 @@
 ---
 name: 'Heroku'
-usage: 'MEDIUM'
+usage: 'LOW'
 used:
   - Deploying web applications, including Django and NodeJS
 practice:
@@ -18,5 +18,5 @@ related:
   - Netlify
   - Google Cloud Platform
   - Travis CI
-note: Heroku is changing their plan structure soon, and removing the free tier, so the practice projects above may not work anymore
+note: Heroku has changed their plan structure, removing the free tier, so some of the practice projects above may not work anymore
 ---

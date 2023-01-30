@@ -7,49 +7,41 @@ import styled from 'styled-components'
 import { Icon } from '@components/icons'
 
 const StyledFeatured = styled.div`
-  .modal-project-featured {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+
+  .gatsby-image-wrapper {
+    width: 30px;
+    border-radius: 5px;
+  }
+
+  img {
+    width: 30px;
+  }
+
+  h5 {
+    font-size: var(--fz-xl);
+    font-family: var(--font-heading);
+    margin: 0;
+  }
+
+  .links {
     display: flex;
     flex-direction: row;
-    margin-bottom: 15px;
+    align-items: center;
+    gap: 10px;
 
-    .gatsby-image-wrapper {
-      width: 100px;
-      background-color: white;
-      border-radius: var(--border-radius) 0 0 var(--border-radius);
-    }
-
-    img {
-      width: 100px;
-    }
-
-    .modal-project-featured-details {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      border: 1px solid var(--slate);
-      border-radius: 0 var(--border-radius) var(--border-radius) 0;
-      padding: 20px;
-      width: 200px;
-
-      h5 {
-        font-size: var(--fz-lg);
-        font-family: var(--font-heading);
+    a {
+      &:hover,
+      &:focus {
+        transform: translateY(-3px);
       }
 
-      .modal-project-featured-icons {
-        a {
-          padding-right: 15px;
-
-          &:hover,
-          &:focus {
-            transform: translateY(-3px);
-          }
-
-          svg {
-            height: 24px;
-            width: 24px;
-          }
-        }
+      svg {
+        height: 24px;
+        width: 24px;
       }
     }
   }
@@ -87,28 +79,29 @@ const SkillModalFeatured = ({ projectName }) => {
 
   return (
     <StyledFeatured>
-      <div className='modal-project-featured'>
-        <GatsbyImage image={image} alt={projectName} className='img' />
-        <div className='modal-project-featured-details'>
-          <h5>{projectName}</h5>
-          <div className='modal-project-featured-icons'>
-            {ios && (
-              <a href={ios} target='_blank' rel='noreferrer'>
-                <Icon name='App Store Connect' />
-              </a>
-            )}
-            {android && (
-              <a href={android} target='_blank' rel='noreferrer'>
-                <Icon name='Google Play Console' />
-              </a>
-            )}
-            {external && (
-              <a href={external} target='_blank' rel='noreferrer'>
-                <Icon name='Link' />
-              </a>
-            )}
-          </div>
-        </div>
+      <GatsbyImage
+        image={image}
+        alt={projectName}
+        className='img'
+        objectFit='contain'
+      />
+      <h5>{projectName}</h5>
+      <div className='links'>
+        {ios && (
+          <a href={ios} target='_blank' rel='noreferrer'>
+            <Icon name='App Store Connect' />
+          </a>
+        )}
+        {android && (
+          <a href={android} target='_blank' rel='noreferrer'>
+            <Icon name='Google Play Console' />
+          </a>
+        )}
+        {external && (
+          <a href={external} target='_blank' rel='noreferrer'>
+            <Icon name='Link' />
+          </a>
+        )}
       </div>
     </StyledFeatured>
   )

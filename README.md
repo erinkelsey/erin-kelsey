@@ -2,7 +2,17 @@
 
 Resume project hosted at https://erinkelsey.io
 
+## Create New Gatsby Site
+
+        $ npm init gatsby
+
 ## Setup
+
+        $ npm install
+
+Stop Dropbox from syncing node_modules:
+
+        $ xattr -w com.dropbox.ignored 1 node_modules/
 
 ## Run
 

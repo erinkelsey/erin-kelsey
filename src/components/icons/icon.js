@@ -152,6 +152,8 @@ const Icon = ({ name }) => {
       return <IconGCP />
     case 'GitHub':
       return <IconGitHub />
+    case 'GitHub Actions':
+      return <IconGitHub />
     case 'GraphQL':
       return <IconGraphQL />
     case 'Heroku':
@@ -262,7 +264,6 @@ const Icon = ({ name }) => {
       return <IconVisualStudio />
     case 'VSCode':
       return <IconVSCode />
-
     case 'WordPress':
       return <IconWordPress />
     case 'XCode':

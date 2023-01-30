@@ -57,6 +57,12 @@ const StyledModalBody = styled.div`
     font-family: var(--font-label);
   }
 
+  .modal-featured {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
   a {
     &:hover,
     &:focus {
@@ -64,6 +70,10 @@ const StyledModalBody = styled.div`
       transform: translateY(-3px);
       color: var(--pink);
     }
+  }
+
+  p {
+    font-size: var(--fz-md);
   }
 `
 
@@ -138,12 +148,14 @@ const SkillModal = ({ name, isOpen, toggle }) => {
         {featured && featured.length > 0 && (
           <>
             <h4 className='modal-section-header'>Featured Projects</h4>
-            {featured.map((projectName, i) => (
-              <SkillModalFeatured
-                key={`${name}-${projectName}-${i}`}
-                projectName={projectName}
-              />
-            ))}
+            <div className='modal-featured'>
+              {featured.map((projectName, i) => (
+                <SkillModalFeatured
+                  key={`${name}-${projectName}-${i}`}
+                  projectName={projectName}
+                />
+              ))}
+            </div>
           </>
         )}
 

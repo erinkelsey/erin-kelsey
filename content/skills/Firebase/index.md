@@ -8,7 +8,6 @@ used:
   - Realtime Database and Cloud Firestore for noSQL databases for web and mobile applications
   - Authentication for authenticating users of applications, either with email and password combinations, or Google SSO
 featured:
-  - Emjinx
   - StreamTECH
 practice:
   - name: 'all'
