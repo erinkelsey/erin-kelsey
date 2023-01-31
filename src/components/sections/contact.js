@@ -34,10 +34,14 @@ const StyledContactSection = styled.section`
     margin: 10px;
     font-size: var(--fz-lg);
 
-    @media (max-width: 768px) {
-      width: 100%;
+    @media (max-width: 900px) {
+      width: 80%;
       font-size: var(--fz-md);
       padding: 10px;
+    }
+
+    @media (max-width: 768px) {
+      width: 100%;
     }
 
     ::placeholder {
@@ -86,7 +90,7 @@ const Contact = () => {
   }, [prefersReducedMotion])
 
   return (
-    <StyledContactSection id='philosophy' ref={revealContainer}>
+    <StyledContactSection ref={revealContainer}>
       <h2 className='section-heading'>Contact</h2>
       <hr className='section-heading-underline section-heading-center' />
       <p>I would love to hear from you! Don’t hesitate to reach out.</p>

@@ -15,12 +15,12 @@ const StyledWorkSection = styled.section`
   .inner {
     display: flex;
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
       display: block;
     }
 
     // Prevent container from jumping
-    @media (min-width: 769px) {
+    @media (min-width: 901px) {
       min-height: 700px;
     }
   }
@@ -29,7 +29,7 @@ const StyledWorkSection = styled.section`
 const StyledTitle = styled.div`
   ${({ theme }) => theme.mixins.flexBetween};
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     justify-content: flex-start;
   }
 `
@@ -42,7 +42,7 @@ const StyledTabList = styled.div`
   margin: 0;
   list-style: none;
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     display: flex;
     overflow-x: auto;
     width: calc(100% + 100px);
@@ -58,7 +58,7 @@ const StyledTabList = styled.div`
 
   li {
     &:first-of-type {
-      @media (max-width: 768px) {
+      @media (max-width: 900px) {
         margin-left: 50px;
       }
       @media (max-width: 480px) {
@@ -66,7 +66,7 @@ const StyledTabList = styled.div`
       }
     }
     &:last-of-type {
-      @media (max-width: 768px) {
+      @media (max-width: 900px) {
         padding-right: 50px;
       }
       @media (max-width: 480px) {
@@ -91,10 +91,10 @@ const StyledTabButton = styled.button`
   text-align: left;
   white-space: nowrap;
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     padding: 0 15px 2px;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     ${({ theme }) => theme.mixins.flexCenter};
     min-width: 220px;
     padding: 0 15px;
@@ -124,7 +124,7 @@ const StyledHighlight = styled.div`
   transition: transform 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition-delay: 0.1s;
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     top: auto;
     bottom: 0;
     width: 100%;
@@ -145,7 +145,7 @@ const StyledTabPanels = styled.div`
   width: 100%;
   margin-left: 20px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     margin-left: 0;
   }
 `
@@ -210,7 +210,7 @@ const StyledTechnologies = styled.div`
   grid-template-columns: repeat(6, 2fr);
   grid-gap: 10px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 600px) {
     grid-template-columns: repeat(3, 2fr);
   }
 `
