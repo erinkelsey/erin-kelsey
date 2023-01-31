@@ -104,7 +104,7 @@ const Footer = () => {
       <StyledCredit>
         <div>
           Thank you <a href='https://brittanychiang.com/'>Brittany Chiang</a>{' '}
-          for the design inspiration!
+          for the inspiration!
         </div>
       </StyledCredit>
     </StyledFooter>

@@ -4,6 +4,7 @@ name: 'Emjinx'
 cover: './logo.png'
 logo: './logo.png'
 back: './back.png'
+right: './right.png'
 external: 'https://emjinx.com'
 show: true
 software: true
@@ -17,4 +18,4 @@ technologies:
   - GitHub Actions
 ---
 
-An online service for implementing contact forms on static websites and landing pages. This service is a REST and GraphQL API, which can be used to send a notifications to the website's owner when someone has contacted them through their site. Available now as a [Web App](https://emjinx.com).
+An online service for implementing contact forms on static websites and landing pages. This service contains GraphQL and REST APIs, which can be used to send a notification to the website's owner, when someone has contacted them through their site. Available now as a [Web App](https://emjinx.com).

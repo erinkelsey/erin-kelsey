@@ -27,6 +27,10 @@ const StyledProject = styled.li`
     ${({ theme }) => theme.mixins.boxShadow};
   }
 
+  .img {
+    border-radius: 5px;
+  }
+
   &:not(:last-of-type) {
     margin-bottom: 100px;
 
@@ -95,15 +99,6 @@ const StyledProject = styled.li`
       }
     }
 
-    .project-image-back-emjinx {
-      grid-column: 1 / 6;
-
-      @media (max-width: 1080px) {
-        grid-column: 2 / 4;
-        width: 300px;
-      }
-    }
-
     .project-image-right-memcards {
       grid-column: 4 / 6;
       justify-self: end;
@@ -142,6 +137,32 @@ const StyledProject = styled.li`
       @media (min-width: 769px) {
         direction: rtl;
       }
+    }
+  }
+
+  .project-image-back-emjinx {
+    grid-column: 7 / 13;
+    border-radius: 5px;
+    padding-left: 80px;
+
+    // @media (max-width: 1080px) {
+    //   grid-column: 2 / 4;
+    //   width: 300px;
+    // }
+  }
+
+  .project-image-right-emjinx {
+    grid-column: 12 / 13;
+    width: 125px;
+    align-self: end;
+    padding-bottom: 40px;
+    padding-right: 10px;
+
+    @media (max-width: 1080px) {
+      grid-column: 1 / 3;
+      width: 75px;
+      align-self: center;
+      padding-top: 150px;
     }
   }
 
@@ -247,10 +268,6 @@ const StyledProject = styled.li`
     &:focus {
       z-index: 5;
       transform: scale(1.25);
-    }
-
-    .img {
-      border-radius: var(--border-radius);
     }
 
     @media (max-width: 768px) {
@@ -444,7 +461,7 @@ const Projects = () => {
                         ? 'project-image project-image-right-memcards'
                         : name === 'StreamTECH'
                         ? 'project-image project-image-right-streamtech'
-                        : 'project-image'
+                        : 'project-image project-image-right-emjinx'
                     }
                   >
                     <GatsbyImage

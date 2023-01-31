@@ -47,7 +47,7 @@ const Loader = ({ finishLoading }) => {
         targets: '#logo #lines path',
         strokeDashoffset: [anime.setDashoffset, 0],
         easing: 'easeInOutSine',
-        duration: 1000,
+        duration: 1500,
         opacity: 1,
         delay: function (el, i) {
           return i * 250
