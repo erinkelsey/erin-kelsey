@@ -22,14 +22,6 @@ const StyledProject = styled.li`
   grid-template-columns: repeat(12, 1fr);
   align-items: center;
 
-  @media (max-width: 900px) {
-    ${({ theme }) => theme.mixins.boxShadow};
-  }
-
-  .img {
-    border-radius: 5px;
-  }
-
   &:not(:last-of-type) {
     margin-bottom: 100px;
 
@@ -149,7 +141,6 @@ const StyledProject = styled.li`
 
   .project-image-back-emjinx {
     grid-column: 7 / 13;
-    border-radius: 5px;
     padding-left: 80px;
 
     @media (max-width: 1080px) {
@@ -211,25 +202,6 @@ const StyledProject = styled.li`
     @media (min-width: 900px) {
       margin: 0 0 20px;
     }
-
-    @media (max-width: 900px) {
-      color: var(--white);
-
-      a {
-        position: static;
-
-        &:before {
-          content: '';
-          display: block;
-          position: absolute;
-          z-index: 0;
-          width: 100%;
-          height: 100%;
-          top: 0;
-          left: 0;
-        }
-      }
-    }
   }
 
   .project-description {
@@ -284,9 +256,10 @@ const StyledProject = styled.li`
   .project-technologies {
     padding-top: 20px;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-gap: 10px;
     grid-column-start: -1;
+    z-index: 10;
 
     @media (max-width: 1200px) {
       grid-template-columns: repeat(5, 1fr);
@@ -303,7 +276,7 @@ const StyledProject = styled.li`
     }
 
     @media (max-width: 768px) {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(5, 1fr);
     }
 
     @media (max-width: 400px) {
@@ -426,9 +399,7 @@ const Projects = () => {
                       {software ? 'Featured Project' : 'Non-Software Project'}
                     </p>
 
-                    <h3 className='project-title'>
-                      <a href={external}>{name}</a>
-                    </h3>
+                    <h3 className='project-title'>{name}</h3>
 
                     <div
                       className='project-description'

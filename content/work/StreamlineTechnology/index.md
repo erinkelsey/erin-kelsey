@@ -25,14 +25,14 @@ technologies:
   - SQL
   - Insomnia
   - Postman
-  - App Store Connect
-  - Google Play Console
   - Firebase
   - HTML
   - JavaScript
   - Bootstrap
   - CSS
   - VSCode
+  - App Store Connect
+  - Google Play Console
 ---
 
 - Design, develop, test, debug, deploy, maintain, and document all aspects of the development stack

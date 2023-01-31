@@ -9,7 +9,12 @@ const StyledIconButton = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 3px;
   width: 80px;
+
+  @media (max-width: 900px) {
+    width: 60px;
+  }
 
   &:hover,
   &:focus {
@@ -22,11 +27,20 @@ const StyledIconButton = styled.div`
   svg {
     width: 24px;
     height: 24px;
+
+    @media max(width: 900px) {
+      width: 18px;
+      height: 18px;
+    }
   }
 
   p {
     font-size: var(--fz-sm);
     text-align: center;
+
+    @media max(width: 900px) {
+      font-size: var(--fz-xxxs);
+    }
   }
 `
 

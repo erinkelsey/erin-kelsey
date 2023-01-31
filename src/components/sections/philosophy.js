@@ -10,6 +10,10 @@ const StyledPhilosophySection = styled.section`
   margin: auto;
   height: 80vh;
 
+  @media (max-width: 900px) {
+    margin-bottom: 50px;
+  }
+
   h2 {
     text-align: center;
   }

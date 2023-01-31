@@ -215,7 +215,7 @@ const StyledTechnologies = styled.div`
   }
 
   @media (max-width: 600px) {
-    grid-template-columns: repeat(3, 2fr);
+    grid-template-columns: repeat(4, 2fr);
   }
 `
 
