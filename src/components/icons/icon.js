@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {
   IconActiveDirectory,
+  IconAdMob,
   IconAndroid,
   IconAndroidStudio,
   IconApollo,
@@ -47,6 +48,7 @@ import {
   IconJupyter,
   IconLightroom,
   IconLink,
+  IconLoader,
   IconLogo,
   IconMaterialUI,
   IconMobileIron,
@@ -148,6 +150,8 @@ const Icon = ({ name }) => {
       return <IconFlutter />
     case 'GatsbyJS':
       return <IconGatsbyJS />
+    case 'Google AdMob':
+      return <IconAdMob />
     case 'Google Cloud Platform':
       return <IconGCP />
     case 'GitHub':
@@ -184,6 +188,8 @@ const Icon = ({ name }) => {
       return <IconLightroom />
     case 'Link':
       return <IconLink />
+    case 'Loader':
+      return <IconLoader />
     case 'Logo':
       return <IconLogo />
     case 'Material UI':

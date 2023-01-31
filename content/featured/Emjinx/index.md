@@ -3,6 +3,7 @@ date: '2'
 name: 'Emjinx'
 cover: './logo.png'
 logo: './logo.png'
+back: './back.png'
 external: 'https://emjinx.com'
 show: true
 software: true

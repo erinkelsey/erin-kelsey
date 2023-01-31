@@ -95,6 +95,15 @@ const StyledProject = styled.li`
       }
     }
 
+    .project-image-back-emjinx {
+      grid-column: 1 / 6;
+
+      @media (max-width: 1080px) {
+        grid-column: 2 / 4;
+        width: 300px;
+      }
+    }
+
     .project-image-right-memcards {
       grid-column: 4 / 6;
       justify-self: end;
@@ -249,61 +258,6 @@ const StyledProject = styled.li`
     }
   }
 
-  .project-image-1 {
-    ${({ theme }) => theme.mixins.boxShadow};
-    grid-column: 6 / -1;
-    grid-row: 1 / -1;
-    position: relative;
-    z-index: 1;
-
-    @media (max-width: 768px) {
-      grid-column: 1 / -1;
-      height: 100%;
-      opacity: 0.25;
-    }
-
-    a {
-      // width: 100%;
-      // height: 100%;
-      // border-radius: var(--border-radius);
-      vertical-align: middle;
-
-      &:hover,
-      &:focus {
-        outline: 0;
-
-        &:before,
-        .img {
-          background: transparent;
-          filter: none;
-        }
-      }
-
-      &:before {
-        content: '';
-        position: absolute;
-        // width: 100%;
-        // height: 100%;
-        // top: 0;
-        // left: 0;
-        // right: 0;
-        // bottom: 0;
-        z-index: 3;
-        transition: var(--transition);
-      }
-    }
-
-    .img {
-      border-radius: var(--border-radius);
-
-      @media (max-width: 768px) {
-        object-fit: cover;
-        width: auto;
-        height: 100%;
-      }
-    }
-  }
-
   .project-technologies {
     padding-top: 20px;
     display: grid;
@@ -416,16 +370,12 @@ const Projects = () => {
             const {
               name,
               external,
-              android,
-              ios,
               technologies,
               software,
-              cover,
               back,
               left,
               right,
             } = frontmatter
-            const image = getImage(cover)
             const backImage = getImage(back)
             const leftImage = getImage(left)
             const rightImage = getImage(right)
@@ -481,7 +431,7 @@ const Projects = () => {
                       ? 'project-image project-image-back-memcards'
                       : name === 'StreamTECH'
                       ? 'project-image project-image-back-streamtech'
-                      : 'project-image'
+                      : 'project-image project-image-back-emjinx'
                   }
                 >
                   <GatsbyImage image={backImage} alt={name} className='img' />

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styled, { ThemeProvider } from 'styled-components'
 
 import { GlobalStyle, theme } from '@styles'
-import { NavBar, Social, Email, Footer } from '@components'
+import { NavBar, Social, Email, Footer, Loader } from '@components'
 
 const StyledContent = styled.div`
   display: flex;
@@ -13,7 +13,7 @@ const StyledContent = styled.div`
 
 const Layout = ({ children, location }) => {
   const isHome = location.pathname === '/'
-  const [isLoading] = useState(isHome)
+  const [isLoading, setIsLoading] = useState(isHome)
 
   // Sets target="_blank" rel="noopener noreferrer" on external links
   const handleExternalLinks = () => {
@@ -56,16 +56,20 @@ const Layout = ({ children, location }) => {
           Skip to Content
         </a>
 
-        <StyledContent>
-          <NavBar isHome={isHome} />
-          <Social isHome={isHome} />
-          <Email isHome={isHome} />
+        {isLoading && isHome ? (
+          <Loader finishLoading={() => setIsLoading(false)} />
+        ) : (
+          <StyledContent>
+            <NavBar isHome={isHome} />
+            <Social isHome={isHome} />
+            <Email isHome={isHome} />
 
-          <div id='content'>
-            {children}
-            <Footer />
-          </div>
-        </StyledContent>
+            <div id='content'>
+              {children}
+              <Footer />
+            </div>
+          </StyledContent>
+        )}
       </ThemeProvider>
     </div>
   )
