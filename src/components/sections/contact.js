@@ -104,7 +104,11 @@ const StyledSendButton = styled.button`
     cursor: not-allowed;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
+    width: 60%;
+  }
+
+  @media (max-width: 600px) {
     width: 100%;
   }
 `

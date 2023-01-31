@@ -19,7 +19,6 @@ const StyledProjectsGrid = styled.ul`
 const StyledProject = styled.li`
   position: relative;
   display: grid;
-  // grid-gap: 10px;
   grid-template-columns: repeat(12, 1fr);
   align-items: center;
 
@@ -40,6 +39,14 @@ const StyledProject = styled.li`
 
     @media (max-width: 480px) {
       margin-bottom: 30px;
+    }
+  }
+
+  &:nth-of-type(even) {
+    padding-top: 50px;
+
+    @media (max-width: 900px) {
+      padding-top: 0px;
     }
   }
 
@@ -185,7 +192,7 @@ const StyledProject = styled.li`
     }
 
     @media (max-width: 480px) {
-      padding: 30px 25px 20px;
+      padding: 30px 0px 20px;
     }
   }
 
@@ -281,6 +288,10 @@ const StyledProject = styled.li`
     grid-gap: 10px;
     grid-column-start: -1;
 
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+
     @media (max-width: 1080px) {
       grid-template-columns: repeat(3, 1fr);
       padding-top: 10px;
@@ -293,6 +304,10 @@ const StyledProject = styled.li`
 
     @media (max-width: 768px) {
       grid-template-columns: repeat(4, 1fr);
+    }
+
+    @media (max-width: 400px) {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 `

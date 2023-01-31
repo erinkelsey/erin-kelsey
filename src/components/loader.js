@@ -23,6 +23,11 @@ const StyledLoader = styled.div`
     transition: var(--transition);
     margin-bottom: 100px;
     opacity: ${(props) => (props.isMounted ? 1 : 0)};
+
+    @media (max-height: 500px) {
+      margin-bottom: 0px;
+    }
+
     svg {
       display: block;
       width: 100%;

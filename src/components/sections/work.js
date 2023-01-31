@@ -210,6 +210,10 @@ const StyledTechnologies = styled.div`
   grid-template-columns: repeat(6, 2fr);
   grid-gap: 10px;
 
+  @media (max-width: 950px) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
   @media (max-width: 600px) {
     grid-template-columns: repeat(3, 2fr);
   }
