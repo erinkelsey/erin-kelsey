@@ -8,5 +8,6 @@ featured:
   - StreamTECH
 related:
   - REST
+  - GraphQL
   - Insomnia
 ---

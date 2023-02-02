@@ -1,6 +1,6 @@
 ---
 name: 'Stripe'
-usage: 'LOW'
+usage: 'MEDIUM'
 used:
   - Connect web and mobile applications to Stripe using the Stripe API, in order to process payments in applications, including subscriptions for SaaS projects
 featured:

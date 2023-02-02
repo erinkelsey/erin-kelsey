@@ -2,7 +2,7 @@
 name: 'CSS'
 usage: 'HIGH'
 used:
-  - Styling websites, landing pages and web applications, using a variety of frameworks and UIs; some of these include, SASS, Bulma, Tachyons, Styled Components, Bootstrap and Material UI
+  - Styling websites, landing pages and web applications, using a variety of frameworks and UIs; some of these include, SASS, Styled Components, Bootstrap, Bulma, Tachyons, and Material UI
 featured:
   - Emjinx
   - Tortuga Studios

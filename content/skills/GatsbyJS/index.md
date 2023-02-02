@@ -1,6 +1,6 @@
 ---
 name: 'GatsbyJS'
-usage: 'MEDIUM'
+usage: 'HIGH'
 used:
   - Building websites, and landing pages, using the GatsbyJS framework and React.
 featured:
@@ -13,6 +13,9 @@ practice:
 related:
   - JavaScript
   - React
+  - GraphQL
   - Netlify
+  - AWS
+  - GitHub Actions
   - npm
 ---

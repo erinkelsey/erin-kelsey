@@ -5,6 +5,7 @@ used:
   - Deploying various types of applications to AWS, via GitHub repository, including multi-container or single container Docker applications, static web pages, and fullstack web applications
 featured:
   - Emjinx
+  - Resume
 related:
   - GitHub
   - Travis CI

@@ -32,4 +32,6 @@ related:
   - Django
   - NodeJS
   - Postman
+  - GraphQL
+  - Insomnia
 ---

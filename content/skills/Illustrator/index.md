@@ -8,10 +8,6 @@ featured:
   - MemCards
   - Resume
   - Tortuga Studios
-practice:
-  - name: 'all'
-    projects:
-      - Add portfolio link
 related:
   - Photoshop
   - Lightroom

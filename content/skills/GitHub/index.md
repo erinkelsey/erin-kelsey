@@ -10,5 +10,9 @@ featured:
   - Tortuga Studios
   - StreamTECH
 related:
+  - GitHub Actions
+  - VSCode
+  - XCode
+  - Android Studio
   - Figma
 ---

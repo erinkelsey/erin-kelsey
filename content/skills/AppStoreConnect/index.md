@@ -10,4 +10,5 @@ related:
   - Flutter
   - Swift
   - Google Play Console
+  - CodeMagic
 ---

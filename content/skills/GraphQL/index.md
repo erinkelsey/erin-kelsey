@@ -30,7 +30,9 @@ related:
   - Apollo
   - GatsbyJS
   - Flutter
+  - Python
   - Django
   - NodeJS
   - Insomnia
+  - REST
 ---

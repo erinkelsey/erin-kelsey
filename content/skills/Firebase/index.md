@@ -20,6 +20,7 @@ practice:
 related:
   - AWS
   - Heroku
+  - GitHub Actions
   - Travis CI
   - Netlify
   - Google Cloud Platform

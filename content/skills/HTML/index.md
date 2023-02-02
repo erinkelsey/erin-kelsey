@@ -5,7 +5,6 @@ used:
   - Building websites, landing pages and web applications, for both professional and personal projects
 featured:
   - Emjinx
-  - Tortuga Studios
   - Resume
   - StreamTECH
 practice:

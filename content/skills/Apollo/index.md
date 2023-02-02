@@ -1,6 +1,6 @@
 ---
 name: 'Apollo'
-usage: 'LOW'
+usage: 'MEDIUM'
 used:
   - Connecting to GraphQL APIs in React applications
 featured:
@@ -11,4 +11,6 @@ practice:
       - https://github.com/erinkelsey/reacttracks-graphql-apollo
 related:
   - React
+  - GraphQL
+  - JavaScript
 ---

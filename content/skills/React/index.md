@@ -3,7 +3,7 @@ name: 'React'
 usage: 'HIGH'
 used:
   - Building frontend web applications, with and without hooks, using common packages, such as react-router and react-redux
-  - Create websites with GatsbyJS
+  - Create static websites and landing pages with GatsbyJS
   - Connect to GraphQL APIs with Apollo
   - Create tests for React components with Jest
 featured:
@@ -27,4 +27,6 @@ related:
   - Redux
   - npm
   - Apollo
+  - GraphQL
+  - REST
 ---

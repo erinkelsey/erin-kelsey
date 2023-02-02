@@ -1,6 +1,6 @@
 ---
 name: 'Bulma'
-usage: 'MEDIUM'
+usage: 'LOW'
 used:
   - Framework for styling websites, landing pages and web applications
 featured:
@@ -8,8 +8,8 @@ featured:
 related:
   - CSS
   - SASS
-  - Bootstrap
   - Styled Components
+  - Bootstrap
   - Material UI
   - Tachyons
 ---

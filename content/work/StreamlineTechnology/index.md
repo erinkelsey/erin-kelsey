@@ -26,6 +26,7 @@ technologies:
   - Insomnia
   - Postman
   - Firebase
+  - Scrum
   - HTML
   - JavaScript
   - Bootstrap

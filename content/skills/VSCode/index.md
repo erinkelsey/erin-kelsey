@@ -6,7 +6,6 @@ used:
 featured:
   - MemCards
   - Emjinx
-  - Tortuga Studios
   - StreamTECH
 related:
   - XCode

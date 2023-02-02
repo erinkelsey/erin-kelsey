@@ -4,7 +4,7 @@ usage: 'MEDIUM'
 used:
   - Styling websites, landing pages and web applications
 featured:
-  - Tortuga Studios
+  - Emjinx
 practice:
   - name: 'all'
     projects:

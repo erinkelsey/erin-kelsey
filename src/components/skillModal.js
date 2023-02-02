@@ -9,7 +9,7 @@ import { Usage, SkillModalFeatured, SkillIcon } from '@components'
 
 const modalStyles = {
   overlay: {
-    backgroundColor: 'rgba(0, 0, 0, 0.58)',
+    backgroundColor: 'rgba(20, 0, 45, 0.58)',
     zIndex: '9999',
   },
 }

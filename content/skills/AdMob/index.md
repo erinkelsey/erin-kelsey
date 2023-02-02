@@ -2,7 +2,7 @@
 name: 'Google AdMob'
 usage: 'LOW'
 used:
-  - Adding ads to mobile applications, both iOS and Android
+  - Adding advertisements to mobile applications, both iOS and Android
 featured:
   - MemCards
 related:

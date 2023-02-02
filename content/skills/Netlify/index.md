@@ -12,5 +12,4 @@ related:
   - Firebase
   - Heroku
   - Google Cloud Platform
-note: Heroku is changing their plan structure soon, and removing the free tier, so the practice projects below may not work anymore
 ---

@@ -19,4 +19,5 @@ related:
   - Heroku
   - Firebase
   - Travis CI
+  - GitHub Actions
 ---

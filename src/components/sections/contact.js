@@ -230,7 +230,7 @@ const Contact = () => {
   }
 
   return (
-    <StyledContactSection ref={revealContainer}>
+    <StyledContactSection id='contact' ref={revealContainer}>
       <h2 className='section-heading'>Contact</h2>
       <hr className='section-heading-underline section-heading-center' />
       <p className='section-subheading'>

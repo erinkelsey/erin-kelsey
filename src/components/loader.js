@@ -24,6 +24,10 @@ const StyledLoader = styled.div`
     margin-bottom: 100px;
     opacity: ${(props) => (props.isMounted ? 1 : 0)};
 
+    @media (max-width: 768px) {
+      margin-bottom: 50px;
+    }
+
     @media (max-height: 500px) {
       margin-bottom: 0px;
     }

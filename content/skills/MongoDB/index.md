@@ -16,4 +16,6 @@ practice:
       - https://github.com/erinkelsey/mongodb-basics
 related:
   - Redis
+  - SQL
+  - PostgreSQL
 ---

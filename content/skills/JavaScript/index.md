@@ -3,13 +3,12 @@ name: 'JavaScript'
 usage: 'HIGH'
 used:
   - Building frontend web applications with React
-  - Building websites with GatsbyJS
+  - Building static websites and landing pages with GatsbyJS
   - Building backend applications with NodeJS and Express, including REST and GraphQL APIs
   - Building fullstack applications with NodeJS, Express and EJS (Embedded JavaScript Templates)
   - Extend functionality of websites, server-rendered pages and landing pages with vanilla JavaScript
 featured:
   - Emjinx
-  - Tortuga Studios
   - Resume
   - StreamTECH
 practice:

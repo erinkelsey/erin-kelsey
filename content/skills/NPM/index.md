@@ -2,12 +2,10 @@
 name: 'npm'
 usage: 'HIGH'
 used:
-  - Managing packages for React, NodeJS and Gatsby applications
+  - Managing packages for React, NodeJS and GatsbyJS applications
 featured:
   - Emjinx
   - Resume
-  - Tortuga Studios
-  - StreamTECH
 practice:
   - name: 'React'
     projects:

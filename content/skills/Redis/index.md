@@ -17,4 +17,5 @@ related:
   - MongoDB
   - AWS
   - Celery
+  - SQL
 ---

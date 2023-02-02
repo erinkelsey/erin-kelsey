@@ -4,7 +4,7 @@ usage: 'LOW'
 used:
   - Create SQL queries, in order to have a clearer view of the data within databases
   - Create scripts to analyze data in databases
-  - Utilize sequelize package to perform database operations with MySQL databases
+  - Utilize sequelize package to perform database operations with MySQL databases in NodeJS applications
 practice:
   - name: 'all'
     projects:
@@ -13,4 +13,6 @@ related:
   - SQL
   - PostgreSQL
   - Oracle
+  - MongoDB
+  - Redis
 ---

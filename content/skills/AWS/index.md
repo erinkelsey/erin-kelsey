@@ -35,6 +35,7 @@ related:
   - Firebase
   - Heroku
   - Docker
+  - GitHub Actions
   - Travis CI
   - Google Cloud Platform
 ---

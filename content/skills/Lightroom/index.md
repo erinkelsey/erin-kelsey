@@ -2,11 +2,8 @@
 name: 'Lightroom'
 usage: 'HIGH'
 used:
+  - Editing photos to be used in graphic design projects, and on websites and landing pages
   - Editing travel and family photos for personal use
-practice:
-  - name: 'all'
-    projects:
-      - Add portfolio link
 related:
   - Illustrator
   - Photoshop

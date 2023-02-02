@@ -17,6 +17,7 @@ related:
   - Firebase
   - Netlify
   - Google Cloud Platform
+  - GitHub Actions
   - Travis CI
 note: Heroku has changed their plan structure, removing the free tier, so some of the practice projects above may not work anymore
 ---

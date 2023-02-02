@@ -13,8 +13,8 @@ practice:
 related:
   - CSS
   - SASS
-  - Bulma
   - Styled Components
+  - Bulma
   - Material UI
   - Tachyons
 ---
