@@ -199,7 +199,6 @@ const Contact = () => {
 
     setErrors(n_formErrors)
 
-    // no formErrors -> submit values
     if (Object.keys(n_formErrors).length === 0) {
       const formData = new FormData()
 

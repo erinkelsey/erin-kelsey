@@ -94,20 +94,6 @@ const StyledProject = styled.li`
     z-index: 0;
     grid-row: 1 / -1;
     transition: var(--transition);
-
-    &:hover,
-    &:focus {
-      z-index: 5;
-      transform: scale(1.25);
-    }
-
-    @media (max-width: 900px) {
-      &:hover,
-      &:focus {
-        z-index: 0;
-        transform: none;
-      }
-    }
   }
 
   .project-technologies {
@@ -118,7 +104,7 @@ const StyledProject = styled.li`
     grid-column-start: -1;
     z-index: 10;
 
-    @media (max-width: 1080px) {
+    @media (max-width: 1200px) {
       grid-template-columns: repeat(4, 1fr);
     }
 
@@ -207,6 +193,7 @@ const StyledProject = styled.li`
     .project-image-back-streamtech {
       grid-column: 1 / 7;
       padding-right: 80px;
+      padding-bottom: 100px;
 
       @media (max-width: 1200px) {
         padding-right: 30px;
@@ -225,17 +212,16 @@ const StyledProject = styled.li`
     .project-image-right-streamtech {
       grid-column: 5 / 7;
       width: 125px;
-      align-self: end;
-      padding-bottom: 40px;
+      align-self: center;
 
       @media (max-width: 1200px) {
+        padding-top: 20px;
         width: 100px;
-        padding-bottom: 70px;
       }
 
       @media (max-width: 1080px) {
+        padding-top: 30px;
         width: 80px;
-        padding-bottom: 90px;
       }
 
       @media (max-width: 900px) {
@@ -253,10 +239,11 @@ const StyledProject = styled.li`
   .project-image-back-emjinx {
     grid-column: 7 / -1;
     padding-left: 80px;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
 
     @media (max-width: 1200px) {
       padding-left: 30px;
+      padding-bottom: 200px;
     }
 
     @media (max-width: 900px) {
@@ -272,16 +259,14 @@ const StyledProject = styled.li`
   .project-image-right-emjinx {
     grid-column: 12 / 13;
     width: 125px;
-    align-self: end;
-    padding-bottom: 90px;
+    align-self: center;
     padding-right: 20px;
 
     @media (max-width: 1200px) {
-      padding-bottom: 110px;
+      padding-bottom: 100px;
     }
 
     @media (max-width: 1080px) {
-      padding-bottom: 150px;
       width: 100px;
     }
 
@@ -366,15 +351,6 @@ const Projects = () => {
           node {
             frontmatter {
               name
-              cover {
-                childImageSharp {
-                  gatsbyImageData(
-                    width: 700
-                    placeholder: BLURRED
-                    formats: [AUTO, WEBP, AVIF]
-                  )
-                }
-              }
               back {
                 childImageSharp {
                   gatsbyImageData(

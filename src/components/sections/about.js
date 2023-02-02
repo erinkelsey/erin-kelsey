@@ -99,9 +99,9 @@ const About = () => {
             I have worked for a variety of companies, ever since graduating from
             the University of Saskatchewan, with a B.Sc. Honours in Computer
             Science. Some of my previous employers include, a leading fintech
-            solutions provider, a small-scale startup, and a large governmental
-            organization. As a result of my varied work experience, my skills,
-            abilities and knowledge are wide-ranging and diverse.
+            solutions provider, a large governmental organization, and a
+            small-scale startup. As a result of my varied work experience, my
+            skills, abilities and knowledge are wide-ranging and diverse.
           </p>
 
           <p>

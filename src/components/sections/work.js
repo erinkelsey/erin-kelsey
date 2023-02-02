@@ -207,7 +207,7 @@ const StyledTabPanel = styled.div`
 
 const StyledTechnologies = styled.div`
   display: grid;
-  grid-template-columns: repeat(6, 2fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-gap: 10px;
 
   @media (max-width: 950px) {
@@ -215,7 +215,7 @@ const StyledTechnologies = styled.div`
   }
 
   @media (max-width: 600px) {
-    grid-template-columns: repeat(4, 2fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 `
 

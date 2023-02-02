@@ -1,7 +1,6 @@
 ---
 date: '5'
 name: 'Tortuga Studios'
-cover: './logo.png'
 logo: './logo.png'
 external: 'https://tortugastudios.io'
 show: false

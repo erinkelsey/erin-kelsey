@@ -1,7 +1,6 @@
 ---
 date: '1'
 name: 'MemCards'
-cover: './logo.png'
 logo: './logo.png'
 back: './back.png'
 left: './left.png'

@@ -4,9 +4,7 @@ Resume project hosted at https://erinkelsey.io
 
 The contact form is implemented with Emjinx, check out https://emjinx.com for more details.
 
-## Create New Gatsby Site
-
-        $ npm init gatsby
+The project is based off the example by Brittany Chiang: https://github.com/bchiang7/v4
 
 ## Setup
 
