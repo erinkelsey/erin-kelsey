@@ -52,20 +52,20 @@ const Layout = ({ children, location }) => {
       <ThemeProvider theme={theme}>
         <GlobalStyle />
 
-        {isLoading && isHome ? (
+        {/* {isLoading && isHome ? (
           <Loader finishLoading={() => setIsLoading(false)} />
-        ) : (
-          <StyledContent>
-            <NavBar isHome={isHome} />
-            <Social isHome={isHome} />
-            <Email isHome={isHome} />
+        ) : ( */}
+        <StyledContent>
+          <NavBar isHome={isHome} />
+          <Social isHome={isHome} />
+          <Email isHome={isHome} />
 
-            <div id='content'>
-              {children}
-              <Footer />
-            </div>
-          </StyledContent>
-        )}
+          <div id='content'>
+            {children}
+            <Footer />
+          </div>
+        </StyledContent>
+        {/* )} */}
       </ThemeProvider>
     </div>
   )
