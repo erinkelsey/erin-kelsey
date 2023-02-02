@@ -9,10 +9,6 @@ import { usePrefersReducedMotion } from '@hooks'
 
 const StyledProjectsGrid = styled.ul`
   ${({ theme }) => theme.mixins.resetList};
-
-  @media (max-width: 900px) {
-    padding-top: 50px;
-  }
 `
 
 const StyledProject = styled.li`
@@ -24,6 +20,7 @@ const StyledProject = styled.li`
   @media (max-width: 900px) {
     display: flex;
     flex-direction: column-reverse;
+    padding-top: 50px;
   }
 
   &:not(:last-of-type) {
