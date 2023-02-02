@@ -1,6 +1,6 @@
 ---
 name: 'Styled Components'
-usage: 'MEDIUM'
+usage: 'HIGH'
 used:
   - Styling React and GatsbyJS websites and applications
 featured:

@@ -15,5 +15,4 @@ practice:
       - https://www.figma.com/file/D2FLeSsLc2MCPhnY8mdTxB/Erin-Kelsey-Designs?node-id=6%3A51&t=93AKDYdOMInI0kvf-1
 related:
   - XD
-  - GitHub
 ---

@@ -107,8 +107,8 @@ const About = () => {
           <p>
             I have been a digital nomad for over five years, living and working
             all across North America, Asia, and more! Life on the road, and
-            working remotely, has made me incredibly independent, motivated and
-            resourceful.
+            working remotely, has led me to become incredibly independent,
+            motivated and resourceful.
           </p>
 
           <p>
