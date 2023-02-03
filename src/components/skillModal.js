@@ -75,6 +75,12 @@ const StyledModalBody = styled.div`
   p {
     font-size: var(--fz-md);
   }
+
+  .practice-project-link {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
 `
 
 const StyledRelated = styled.div`
@@ -172,6 +178,7 @@ const SkillModal = ({ name, isOpen, toggle }) => {
                         return (
                           <li key={`${name}-${project}-${i}`}>
                             <a
+                              className='practice-project-link'
                               href={project}
                               target='_blank'
                               rel='noopener noreferrer'
