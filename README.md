@@ -18,6 +18,7 @@ Create a .env file in the root directory with the following environment variable
 
         GATSBY_EMJINX_API_URL=https://api.emjinx.com/rest/
         GATSBY_EMJINX_API_KEY=your-emjinx-api-key
+        GATSBY_GTAG_ID=your-google-gtag-id
 
 ## Run
 
@@ -26,6 +27,8 @@ Create a .env file in the root directory with the following environment variable
 Location: http://localhost:8000
 
 GraphiQL: http://localhost:8000/\_\_\_graphql
+
+Note: Google Analytics will only work in production mode, so to see if your Google GTag is working run the Build and Deploy commands
 
 ## Build
 
